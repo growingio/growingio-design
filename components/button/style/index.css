@@ -1,0 +1,36 @@
+.arco-btn-group .arco-btn-primary:not(:last-child),
+.arco-btn-group .arco-btn-secondary:not(:last-child) {
+  border-right: 1px solid var(--color-bg-1);
+}
+
+.arco-btn-dashed.arco-btn-status-primary:not(.arco-btn-disabled) {
+  background-color: rgb(var(--primary-1));
+  color: rgb(var(--primary-6));
+  border-color: rgb(var(--primary-4));
+}
+.arco-btn-outline.arco-btn-status-primary:not(.arco-btn-disabled) {
+  background-color: rgb(var(--white));
+  color: rgb(var(--primary-6));
+  border-color: rgb(var(--primary-6));
+}
+.arco-btn-text.arco-btn-status-primary:not(.arco-btn-disabled) {
+  background-color: transparent;
+  color: rgb(var(--primary-6));
+  border-color: transparent;
+}
+
+.arco-btn-dashed.arco-btn-status-primary.arco-btn-disabled {
+  background-color: rgb(var(--primary-1));
+  color: rgb(var(--primary-2));
+  border-color: rgb(var(--primary-2));
+}
+.arco-btn-outline.arco-btn-status-primary.arco-btn-disabled {
+  background-color: rgb(var(--white));
+  color: rgb(var(--primary-2));
+  border-color: rgb(var(--primary-3));
+}
+.arco-btn-text.arco-btn-status-primary.arco-btn-disabled {
+  background-color: transparent;
+  color: rgb(var(--primary-2));
+  border-color: transparent;
+}
