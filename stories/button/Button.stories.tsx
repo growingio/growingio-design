@@ -44,12 +44,6 @@ const meta: Meta<typeof Button> = {
     },
   },
   component: Button,
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/ZWk8AwsKxyXRlobAY94Zms/GIO%E6%96%B0%E7%BB%84%E4%BB%B6-%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E?type=design&node-id=4%3A5193&mode=design&t=jsmHyN8goBERVGcA-1",
-    },
-  },
   title: "通用/Button 按钮",
 };
 
