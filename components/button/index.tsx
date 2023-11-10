@@ -26,4 +26,13 @@ const Button = ForwardRefButton as typeof ForwardRefButton & {
 Button.Group = ArcoButton.Group;
 Button.displayName = "Button";
 
+/**
+ * # Button
+ *
+ * ## Example usage
+ *
+ * ```
+ * <Button></Button>
+ * ```
+ */
 export default Button;

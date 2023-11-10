@@ -3,20 +3,29 @@ import * as React from "react";
 import { DocsContainer } from "@storybook/blocks";
 import { IntlProvider } from "react-intl";
 import { ConfigProvider } from "@arco-design/web-react";
-import zhCNComponentLocale from "@arco-design/web-react/es/locale/zh-CN";
-import enUSComponentLocale from "@arco-design/web-react/es/locale/en-US";
-import zhCNDocsLocale from "./locales/zh-CN.json";
-import enUSDocsLocale from "./locales/en-US.json";
+import zhCN from "@arco-design/web-react/es/locale/zh-CN";
+import enUS from "@arco-design/web-react/es/locale/en-US";
+import zhCNMessages from "./lang/zh-CN.json";
+import enUSMessages from "./lang/en-US.json";
 
 import "@arco-themes/react-growingio/css/arco.css";
 
 const getComponentLocale = (locale: string) => {
   switch (locale) {
     case "en-US":
-      return enUSComponentLocale;
+      return enUS;
     case "zh-CN":
     default:
-      return zhCNComponentLocale;
+      return zhCN;
+  }
+};
+const getDocsLocale = (locale: string) => {
+  switch (locale) {
+    case "en-US":
+      return enUSMessages;
+    case "zh-CN":
+    default:
+      return zhCNMessages;
   }
 };
 
@@ -25,38 +34,21 @@ const withConfigProvider = (Story, context) => {
     globals: { locale, direction },
   } = context;
   return (
-    <ConfigProvider
-      locale={getComponentLocale(locale)}
-      rtl={direction === "rtl"}
-    >
-      <Story />
-    </ConfigProvider>
+    <IntlProvider locale={locale} messages={getDocsLocale(locale)}>
+      <ConfigProvider
+        locale={getComponentLocale(locale)}
+        rtl={direction === "rtl"}
+      >
+        <Story />
+      </ConfigProvider>
+    </IntlProvider>
   );
 };
 
-const getDocsLocale = (locale: string) => {
-  switch (locale) {
-    case "en-US":
-      return enUSDocsLocale;
-    case "zh-CN":
-    default:
-      return zhCNDocsLocale;
-  }
-};
 const customDocsContainer = ({ children, context, ...restProps }) => {
-  const {
-    store: {
-      globals: {
-        globals: { locale },
-      },
-    },
-  } = context;
-
   return (
     <DocsContainer context={context} {...restProps}>
-      <IntlProvider locale={locale} messages={getDocsLocale(locale)}>
-        {children}
-      </IntlProvider>
+      {children}
     </DocsContainer>
   );
 };
@@ -71,7 +63,7 @@ const preview: Preview = {
       toolbar: {
         icon: "globe",
         items: [
-          { value: "en-US", right: "🇺🇸", title: "English (United States)" },
+          { value: "en-US", right: "🇺🇸", title: "English(United States)" },
           { value: "zh-CN", right: "🇨🇳", title: "简体中文" },
         ],
       },

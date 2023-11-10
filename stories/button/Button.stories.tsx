@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
+import { useIntl } from "react-intl";
 import { Space } from "@arco-design/web-react";
 import {
   IconAlignLeft,
@@ -52,25 +53,31 @@ type Story = StoryObj<typeof Button>;
 
 export const BasicButtons: Story = {
   name: "基础按钮",
-  render: (args) => (
-    <Space size="large">
-      <Button {...args} type="primary">
-        主要按钮
-      </Button>
-      <Button {...args} type="secondary">
-        默认按钮
-      </Button>
-      <Button {...args} type="dashed">
-        虚线按钮
-      </Button>
-      <Button {...args} type="outline">
-        线框按钮
-      </Button>
-      <Button {...args} type="text">
-        文字按钮
-      </Button>
-    </Space>
-  ),
+  render: (args) => {
+    const intl = useIntl();
+    return (
+      <Space size="large">
+        <Button {...args} type="primary">
+          {intl.formatMessage({
+            id: "Button-BasicButtons-Primary",
+            defaultMessage: "主要按钮",
+          })}
+        </Button>
+        <Button {...args} type="secondary">
+          默认按钮
+        </Button>
+        <Button {...args} type="dashed">
+          虚线按钮
+        </Button>
+        <Button {...args} type="outline">
+          线框按钮
+        </Button>
+        <Button {...args} type="text">
+          文字按钮
+        </Button>
+      </Space>
+    );
+  },
 };
 
 export const IconButtons: Story = {
