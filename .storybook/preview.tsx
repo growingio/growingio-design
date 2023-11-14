@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 import * as React from "react";
 import { DocsContainer } from "@storybook/blocks";
-import { IntlProvider } from "react-intl";
+import { IntlProvider, useIntl } from "react-intl";
 import { ConfigProvider } from "@arco-design/web-react";
 import zhCN from "@arco-design/web-react/es/locale/zh-CN";
 import enUS from "@arco-design/web-react/es/locale/en-US";
@@ -9,6 +9,16 @@ import zhCNMessages from "./lang/zh-CN.json";
 import enUSMessages from "./lang/en-US.json";
 
 import "@arco-themes/react-growingio/css/arco.css";
+
+export const withIntl = (storyRender) => {
+  const intl = useIntl();
+  return storyRender(intl);
+};
+
+export const getI18nDoc = (docsMap: { [key: string]: string }) => {
+  const intl = useIntl();
+  return docsMap[intl.locale];
+};
 
 const getComponentLocale = (locale: string) => {
   switch (locale) {
@@ -29,12 +39,19 @@ const getDocsLocale = (locale: string) => {
   }
 };
 
+const defaultLocale = "zh-CN";
+
 const withConfigProvider = (Story, context) => {
   const {
     globals: { locale, direction },
   } = context;
+
   return (
-    <IntlProvider locale={locale} messages={getDocsLocale(locale)}>
+    <IntlProvider
+      defaultLocale={defaultLocale}
+      locale={locale}
+      messages={getDocsLocale(locale)}
+    >
       <ConfigProvider
         locale={getComponentLocale(locale)}
         rtl={direction === "rtl"}
@@ -46,9 +63,23 @@ const withConfigProvider = (Story, context) => {
 };
 
 const customDocsContainer = ({ children, context, ...restProps }) => {
+  const {
+    store: {
+      globals: {
+        globals: { locale },
+      },
+    },
+  } = context;
+
   return (
     <DocsContainer context={context} {...restProps}>
-      {children}
+      <IntlProvider
+        defaultLocale={defaultLocale}
+        locale={locale}
+        messages={getDocsLocale(locale)}
+      >
+        {children}
+      </IntlProvider>
     </DocsContainer>
   );
 };
