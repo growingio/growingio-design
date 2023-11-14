@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import path from "node:path";
 
 const config: StorybookConfig = {
   stories: [
@@ -9,6 +10,20 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    {
+      name: "@storybook/addon-storysource",
+      options: {
+        rule: {
+          test: [/\.stories\.tsx?$/], //This is default
+          include: [path.resolve(__dirname, "../components")], // You can specify directories
+        },
+        loaderOptions: {
+          injectStoryParameters: true,
+          prettierConfig: { printWidth: 80, singleQuote: false },
+        },
+      },
+    },
+    "@storybook/addon-mdx-gfm"
   ],
   framework: {
     name: "@storybook/react-vite",

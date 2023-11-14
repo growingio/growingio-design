@@ -1,44 +1,100 @@
-import { Canvas, Meta, ArgTypes } from "@storybook/blocks";
+import { Canvas, Meta, Title, Markdown, Source } from "@storybook/blocks";
+import { FormattedMessage } from "react-intl";
+import { getI18nDoc } from "../../.storybook/preview";
 import * as ButtonStories from "./Button.stories";
+import zhCN from "./props/zh-CN.md?raw";
+import enUS from "./props/en-US.md?raw";
 
 <Meta of={ButtonStories} />
 
-# 按钮 Button
+<Title>
+  <FormattedMessage id="button-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="button-docs-desc" />
+</p>
 
-### 基础按钮
+<Source code={`import { Button } from "growingio-design";`} language="tsx" />
 
+## Stories
+
+<h3 id="basic-buttons">
+  <FormattedMessage id="button-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-basic-desc" />
+</p>
 <Canvas of={ButtonStories.BasicButtons} />
 
-### 图标按钮
-
+<h3 id="icon-buttons">
+  <FormattedMessage id="button-docs-icon-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-icon-desc" />
+</p>
 <Canvas of={ButtonStories.IconButtons} />
 
-### 按钮形状
-
+<h3 id="button-shapes">
+  <FormattedMessage id="button-docs-shape-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-shape-desc" />
+</p>
 <Canvas of={ButtonStories.ButtonShapes} />
 
-### 按钮尺寸
-
+<h3 id="button-sizes">
+  <FormattedMessage id="button-docs-size-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-size-desc" />
+</p>
 <Canvas of={ButtonStories.ButtonSizes} />
 
-### 按钮状态
-
+<h3 id="button-status">
+  <FormattedMessage id="button-docs-status-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-status-desc" />
+</p>
 <Canvas of={ButtonStories.ButtonStatus} />
 
-### 禁用状态
-
+<h3 id="disabled">
+  <FormattedMessage id="button-docs-disabled-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-disabled-desc" />
+</p>
 <Canvas of={ButtonStories.DisabledButtons} />
 
-### 组合按钮
+<h3 id="loading-buttons">
+  <FormattedMessage id="button-docs-loading-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-loading-desc" />
+</p>
+<Canvas of={ButtonStories.LoadingButtons} />
 
+<h3 id="button-groups">
+  <FormattedMessage id="button-docs-group-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-group-desc" />
+</p>
 <Canvas of={ButtonStories.ButtonGroups} />
 
-### 长按钮
-
+<h3 id="long-buttons">
+  <FormattedMessage id="button-docs-long-title" />
+</h3>
+<p>
+  <FormattedMessage id="button-docs-long-desc" />
+</p>
 <Canvas of={ButtonStories.LongButtons} />
 
-### Props
+## Props
 
-<ArgTypes of={ButtonStories} />
-
-其他参考 [按钮 Button | Arco Design](https://arco.growingio.design/react/components/button)
+<Markdown>
+  {getI18nDoc({
+    "en-US": enUS,
+    "zh-CN": zhCN,
+  })}
+</Markdown>

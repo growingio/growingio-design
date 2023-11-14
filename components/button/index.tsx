@@ -5,14 +5,23 @@ import {
   ButtonProps as ArcoButtonProps,
 } from "@arco-design/web-react/es/Button";
 
-export type ButtonProps = Omit<ArcoButtonProps, "status"> & {
+export type ButtonProps = Omit<ArcoButtonProps, "status" | "size" | "type"> & {
   status?: "primary" | "default" | "success" | "warning" | "danger";
+  size?: "mini" | "small" | "medium" | "large";
+  type?: "primary" | "default" | "dashed" | "outline" | "text";
 };
 
 const ButtonFunction = (props: ButtonProps, ref: React.Ref<unknown>) => {
-  const { className, status, ...restProps } = props;
+  const { className, status, size, ...restProps } = props;
   const cls = clsx({ [`arco-btn-status-${status}`]: !!status }, className);
-  return <ArcoButton ref={ref} {...restProps} className={cls} />;
+  return (
+    <ArcoButton
+      ref={ref}
+      {...restProps}
+      size={size === "medium" ? "default" : size}
+      className={cls}
+    />
+  );
 };
 
 const ForwardRefButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -26,13 +35,4 @@ const Button = ForwardRefButton as typeof ForwardRefButton & {
 Button.Group = ArcoButton.Group;
 Button.displayName = "Button";
 
-/**
- * # Button
- *
- * ## Example usage
- *
- * ```
- * <Button></Button>
- * ```
- */
 export default Button;
