@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@arco-design/web-react": "^2.55.2",
-    "@arco-themes/react-growingio": "0.0.4",
+    "@arco-design/web-react": "^2.56.0",
+    "@arco-themes/react-growingio": "0.0.5",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
     "@storybook/addon-docs": "^7.5.3",
