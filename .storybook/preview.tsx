@@ -1,5 +1,6 @@
 import type { Preview } from "@storybook/react";
 import * as React from "react";
+import { themes } from "@storybook/theming";
 import { DocsContainer } from "@storybook/blocks";
 import { IntlProvider, useIntl } from "react-intl";
 import { ConfigProvider } from "@arco-design/web-react";
@@ -62,17 +63,21 @@ const withConfigProvider = (Story, context) => {
   );
 };
 
-const customDocsContainer = ({ children, context, ...restProps }) => {
+const customDocsContainer = ({ children, context }) => {
   const {
     store: {
       globals: {
-        globals: { locale },
+        globals: { locale, theme },
       },
     },
   } = context;
 
+  React.useEffect(() => {
+    document.body.setAttribute("arco-theme", theme);
+  }, [theme]);
+
   return (
-    <DocsContainer context={context} {...restProps}>
+    <DocsContainer context={context} theme={themes[theme || "light"]}>
       <IntlProvider
         defaultLocale={defaultLocale}
         locale={locale}
@@ -94,7 +99,7 @@ const preview: Preview = {
       toolbar: {
         icon: "globe",
         items: [
-          { value: "en-US", right: "🇺🇸", title: "English(United States)" },
+          { value: "en-US", right: "🇺🇸", title: "English (United States)" },
           { value: "zh-CN", right: "🇨🇳", title: "简体中文" },
         ],
       },
@@ -111,20 +116,20 @@ const preview: Preview = {
         ],
       },
     },
-    // theme: {
-    //   description: "Global theme for components",
-    //   defaultValue: "light",
-    //   toolbar: {
-    //     title: "Theme",
-    //     icon: "circlehollow",
-    //     items: [
-    //       { value: "light", icon: "sun", title: "Light" },
-    //       { value: "dark", icon: "moon", title: "Dark" },
-    //       { value: "system", icon: "browser", title: "System" },
-    //     ],
-    //     dynamicTitle: true,
-    //   },
-    // },
+    theme: {
+      description: "Global theme for components",
+      defaultValue: "light",
+      toolbar: {
+        title: "Theme",
+        icon: "circlehollow",
+        items: [
+          { value: "light", icon: "sun", title: "Light mode" },
+          { value: "dark", icon: "moon", title: "Dark mode" },
+          { value: "system", icon: "browser", title: "System theme" },
+        ],
+        dynamicTitle: true,
+      },
+    },
   },
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
