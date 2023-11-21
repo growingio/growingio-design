@@ -11,3 +11,7 @@ node_modules
 # storybook
 storybook-static
 .storybook/compiled-locales
+
+# parcel
+.parcel-cache
+dist
