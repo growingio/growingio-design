@@ -1,0 +1,37 @@
+{
+  "name": "growingio-design",
+  "version": "1.0.0",
+  "description": "",
+  "source": "components/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "GrowingIO Frontend <eng-frontend@growingio.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@arco-design/web-react": "^2.56.0",
+    "@arco-themes/react-growingio": "0.0.5",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "parcel": "^2.10.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.5.2",
+    "typescript": "^5.2.2",
+    "website": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  }
+}

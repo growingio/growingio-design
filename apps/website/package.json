@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006 --docs",
+    "build-storybook": "storybook build --docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@arco-design/web-react": "^2.56.0",
+    "@arco-themes/react-growingio": "0.0.5",
+    "@storybook/addon-docs": "^7.5.3",
+    "@storybook/addon-toolbars": "^7.5.3",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/manager-api": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/theming": "^7.5.3",
+    "growingio-design": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.5.2",
+    "storybook": "^7.5.3",
+    "typescript": "^5.2.2"
+  }
+}

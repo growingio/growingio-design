@@ -14,12 +14,12 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "resolveJsonModule": true
   },
-  "include": ["components/**/*.ts", "components/**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    "components/**/*.test.tsx",
-    "components/**/*.test.ts"
-  ]
+  "include": [
+    "packages/*/components/**/*.ts",
+    "packages/*/components/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
 }

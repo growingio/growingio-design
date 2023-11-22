@@ -12,14 +12,14 @@ import {
   IconMore,
   IconMessage,
 } from "@arco-design/web-react/icon";
-import { withIntl } from "../../.storybook/preview";
-import Button from "../../components/button";
-import "../../components/button/style";
+import { withIntl } from "website/.storybook/preview";
+import Button from "../../button";
+import "../../button/style";
 import { useIntl } from "react-intl";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: "General/Button",
+  title: "Base/Button",
 };
 
 export default meta;
