@@ -15,9 +15,14 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "nx-g": ["libs/nx-g/src/index.ts"],
+      "nx-react": ["libs/nx-react/src/index.ts"]
+    }
   },
   "include": [
+    "libs/**/*.ts",
     "packages/*/components/**/*.ts",
     "packages/*/components/**/*.tsx"
   ],

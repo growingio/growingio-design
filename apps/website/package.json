@@ -21,7 +21,6 @@
     "@storybook/react": "^7.5.3",
     "@storybook/react-vite": "^7.5.3",
     "@storybook/theming": "^7.5.3",
-    "growingio-design": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.5.2",
