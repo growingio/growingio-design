@@ -1,15 +1,15 @@
-import type { Preview } from "@storybook/react";
-import * as React from "react";
-import { themes } from "@storybook/theming";
-import { DocsContainer } from "@storybook/blocks";
-import { IntlProvider, useIntl } from "react-intl";
-import { ConfigProvider } from "@arco-design/web-react";
-import zhCN from "@arco-design/web-react/es/locale/zh-CN";
-import enUS from "@arco-design/web-react/es/locale/en-US";
-import zhCNMessages from "./lang/zh-CN.json";
-import enUSMessages from "./lang/en-US.json";
+import type { Preview } from '@storybook/react';
+import * as React from 'react';
+import { themes } from '@storybook/theming';
+import { DocsContainer } from '@storybook/blocks';
+import { IntlProvider, useIntl } from 'react-intl';
+import { ConfigProvider } from '@arco-design/web-react';
+import zhCN from '@arco-design/web-react/es/locale/zh-CN';
+import enUS from '@arco-design/web-react/es/locale/en-US';
+import zhCNMessages from './lang/zh-CN.json';
+import enUSMessages from './lang/en-US.json';
 
-import "@arco-themes/react-growingio/css/arco.css";
+import '@arco-themes/react-growingio/css/arco.css';
 
 export const withIntl = (storyRender) => {
   const intl = useIntl();
@@ -23,24 +23,24 @@ export const getI18nDoc = (docsMap: { [key: string]: string }) => {
 
 const getComponentLocale = (locale: string) => {
   switch (locale) {
-    case "en-US":
+    case 'en-US':
       return enUS;
-    case "zh-CN":
+    case 'zh-CN':
     default:
       return zhCN;
   }
 };
 const getDocsLocale = (locale: string) => {
   switch (locale) {
-    case "en-US":
+    case 'en-US':
       return enUSMessages;
-    case "zh-CN":
+    case 'zh-CN':
     default:
       return zhCNMessages;
   }
 };
 
-const defaultLocale = "zh-CN";
+const defaultLocale = 'zh-CN';
 
 const withConfigProvider = (Story, context) => {
   const {
@@ -55,7 +55,7 @@ const withConfigProvider = (Story, context) => {
     >
       <ConfigProvider
         locale={getComponentLocale(locale)}
-        rtl={direction === "rtl"}
+        rtl={direction === 'rtl'}
       >
         <Story />
       </ConfigProvider>
@@ -73,11 +73,11 @@ const customDocsContainer = ({ children, context }) => {
   } = context;
 
   React.useEffect(() => {
-    document.body.setAttribute("arco-theme", theme);
+    document.body.setAttribute('arco-theme', theme);
   }, [theme]);
 
   return (
-    <DocsContainer context={context} theme={themes[theme || "light"]}>
+    <DocsContainer context={context} theme={themes[theme || 'light']}>
       <IntlProvider
         defaultLocale={defaultLocale}
         locale={locale}
@@ -93,46 +93,47 @@ const preview: Preview = {
   decorators: [withConfigProvider],
   globalTypes: {
     locale: {
-      name: "Locale",
-      description: "Internationalization locales",
-      defaultValue: "zh-CN",
+      name: 'Locale',
+      description: 'Internationalization locales',
+      defaultValue: 'zh-CN',
       toolbar: {
-        icon: "globe",
+        icon: 'globe',
         items: [
-          { value: "en-US", right: "🇺🇸", title: "English (United States)" },
-          { value: "zh-CN", right: "🇨🇳", title: "简体中文" },
+          { value: 'en-US', right: '🇺🇸', title: 'English (United States)' },
+          { value: 'zh-CN', right: '🇨🇳', title: '简体中文' },
         ],
+        dynamicTitle: true,
       },
     },
     direction: {
-      name: "Direction",
-      description: "Set the direction of layout",
-      defaultValue: "ltr",
+      name: 'Direction',
+      description: 'Set the direction of layout',
+      defaultValue: 'ltr',
       toolbar: {
-        icon: "paragraph",
+        icon: 'paragraph',
         items: [
-          { value: "ltr", right: "LTR", title: "Left To Right" },
-          { value: "rtl", right: "RTL", title: "Right To Left" },
+          { value: 'ltr', right: 'LTR', title: 'Left To Right' },
+          { value: 'rtl', right: 'RTL', title: 'Right To Left' },
         ],
       },
     },
     theme: {
-      description: "Global theme for components",
-      defaultValue: "light",
+      description: 'Global theme for components',
+      defaultValue: 'light',
       toolbar: {
-        title: "Theme",
-        icon: "circlehollow",
+        title: 'Theme',
+        icon: 'circlehollow',
         items: [
-          { value: "light", icon: "sun", title: "Light mode" },
-          { value: "dark", icon: "moon", title: "Dark mode" },
-          { value: "system", icon: "browser", title: "System theme" },
+          { value: 'light', icon: 'sun', title: 'Light mode' },
+          { value: 'dark', icon: 'moon', title: 'Dark mode' },
+          { value: 'system', icon: 'browser', title: 'System theme' },
         ],
         dynamicTitle: true,
       },
     },
   },
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
