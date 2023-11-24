@@ -4,6 +4,11 @@
       "factory": "./src/generators/component/generator",
       "schema": "./src/generators/component/schema.json",
       "description": "component generator"
+    },
+    "component-story": {
+      "factory": "./src/generators/component-story/generator",
+      "schema": "./src/generators/component-story/schema.json",
+      "description": "component-story generator"
     }
   }
 }

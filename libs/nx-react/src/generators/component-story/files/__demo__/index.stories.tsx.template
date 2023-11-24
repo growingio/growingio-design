@@ -1,0 +1,18 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+import { useIntl } from "react-intl";
+import { withIntl } from "website/.storybook/preview";
+import <%= className %> from "../../button";
+import "../../button/style";
+
+const meta: Meta<typeof <%= className %>> = {
+  component: <%= className %>,
+  title: "Base/<%= className %>",
+};
+
+export default meta;
+type Story = StoryObj<typeof <%= className %>>;
+
+export const Basic: Story = {
+  render: (args) => withIntl((intl) => (<<%= className %> />))
+};
