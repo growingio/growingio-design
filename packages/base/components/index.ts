@@ -5,3 +5,6 @@ export type { ButtonProps } from './button';
 
 export { default as Empty } from './empty';
 export type { EmptyProps } from './empty';
+
+export { default as Space } from './space';
+export type { SpaceProps } from './space';

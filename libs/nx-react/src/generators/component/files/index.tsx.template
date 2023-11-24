@@ -1,25 +1,25 @@
 import * as React from "react";
 import {
-  default as Arco<%= name %>,
-  <%= name %>Props as Arco<%= name %>Props,
-} from "@arco-design/web-react/es/<%= name %>";
+  default as Arco<%= className %>,
+  <%= className %>Props as Arco<%= className %>Props,
+} from "@arco-design/web-react/es/<%= className %>";
 
-export type <%= name %>Props = Arco<%= name %>Props;
+export type <%= className %>Props = Arco<%= className %>Props;
 
-const <%= name %>Function = (props: <%= name %>Props, ref: React.Ref<unknown>) => {
+const <%= className %>Function = (props: <%= className %>Props, ref: React.Ref<unknown>) => {
   return (
-    <Arco<%= name %>
+    <Arco<%= className %>
       ref={ref}
       {...props}
     />
   );
 }
 
-const ForwardRef<%= name %> = React.forwardRef<HTMLElement, <%= name %>Props>(
-  <%= name %>Function
+const ForwardRef<%= className %> = React.forwardRef<HTMLElement, <%= className %>Props>(
+  <%= className %>Function
 );
 
-const <%= name %> = ForwardRef<%= name %> as typeof ForwardRef<%= name %>;
-<%= name %>.displayName = "<%= name %>";
+const <%= className %> = ForwardRef<%= className %> as typeof ForwardRef<%= className %>;
+<%= className %>.displayName = "<%= className %>";
 
-export default <%= name %>;
+export default <%= className %>;

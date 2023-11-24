@@ -4,23 +4,30 @@
   "title": "",
   "type": "object",
   "properties": {
-    "name": {
+    "project": {
       "type": "string",
-      "description": "The name of component",
+      "description": "Which project is the component in?",
       "$default": {
         "$source": "argv",
         "index": 0
       },
+      "x-prompt": "Where is the component placed?"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of component",
       "x-prompt": "What name would you like to use?"
     },
-    "directory": {
-      "type": "string",
-      "description": "The directory where is component to place",
-      "x-prompt": "Where is the component placed?"
+    "export": {
+      "type": "boolean",
+      "description": "When true, the component is exported from the project `index.ts` (if it exists).",
+      "alias": "e",
+      "default": true,
+      "x-prompt": "Should this component be exported in the project?"
     }
   },
   "required": [
     "name",
-    "directory"
+    "project"
   ]
 }

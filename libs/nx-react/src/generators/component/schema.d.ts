@@ -1,4 +1,5 @@
 export interface ComponentGeneratorSchema {
   name: string;
-  directory: string;
+  project: string;
+  export?: boolean;
 }
