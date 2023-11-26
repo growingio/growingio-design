@@ -23,11 +23,9 @@
   "devDependencies": {
     "@storybook/blocks": "^7.5.3",
     "@storybook/react": "^7.5.3",
-    "parcel": "^2.10.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.5.2",
-    "typescript": "^5.2.2",
     "website": "workspace:*"
   },
   "peerDependencies": {
