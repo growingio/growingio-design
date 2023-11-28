@@ -1,0 +1,135 @@
+import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
+import { FormattedMessage } from 'react-intl';
+import { getI18nDoc } from 'website/.storybook/preview';
+import * as TagStories from './index.stories';
+import zhCN from './props/zh-CN.md?raw';
+import enUS from './props/en-US.md?raw';
+
+<Meta of={TagStories} />
+
+<Title>
+  <FormattedMessage id="tag-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="tag-docs-desc" />
+</p>
+
+<Source
+  code={`import { Tag, BadgeTag, AvatarTag } from "growingio-design";`}
+  language="tsx"
+/>
+
+## Stories
+
+<h3 id="basic">
+  <FormattedMessage id="tag-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-basic-desc" />
+</p>
+<Canvas of={TagStories.Basic} />
+
+<h3 id="close">
+  <FormattedMessage id="tag-docs-close-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-close-desc" />
+</p>
+<Canvas of={TagStories.Close} />
+
+<h3 id="check">
+  <FormattedMessage id="tag-docs-check-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-check-desc" />
+</p>
+<Canvas of={TagStories.Check} />
+
+<h3 id="type">
+  <FormattedMessage id="tag-docs-type-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-type-desc" />
+</p>
+<Canvas of={TagStories.Type} />
+
+<h3 id="disabled">
+  <FormattedMessage id="tag-docs-disabled-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-disabled-desc" />
+</p>
+<Canvas of={TagStories.Disabled} />
+
+<h3 id="color">
+  <FormattedMessage id="tag-docs-color-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-color-desc" />
+</p>
+<Canvas of={TagStories.Color} />
+
+<h3 id="active">
+  <FormattedMessage id="tag-docs-active-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-active-desc" />
+</p>
+<Canvas of={TagStories.Active} />
+
+<h3 id="size">
+  <FormattedMessage id="tag-docs-size-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-size-desc" />
+</p>
+<Canvas of={TagStories.Size} />
+
+<h3 id="close-async">
+  <FormattedMessage id="tag-docs-close-async-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-close-async-desc" />
+</p>
+<Canvas of={TagStories.CloseAsync} />
+
+<h3 id="icon">
+  <FormattedMessage id="tag-docs-icon-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-icon-desc" />
+</p>
+<Canvas of={TagStories.Icon} />
+
+<h3 id="bordered">
+  <FormattedMessage id="tag-docs-bordered-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-bordered-desc" />
+</p>
+<Canvas of={TagStories.Bordered} />
+
+<h3 id="badge-tag">
+  <FormattedMessage id="tag-docs-badge-tag-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-badge-tag-desc" />
+</p>
+<Canvas of={TagStories.BadgeTagBasic} />
+
+<h3 id="avatar-tag">
+  <FormattedMessage id="tag-docs-avatar-tag-title" />
+</h3>
+<p>
+  <FormattedMessage id="tag-docs-avatar-tag-desc" />
+</p>
+<Canvas of={TagStories.AvatarTagBasic} />
+
+## Props
+
+<Markdown>
+  {getI18nDoc({
+    'en-US': enUS,
+    'zh-CN': zhCN,
+  })}
+</Markdown>

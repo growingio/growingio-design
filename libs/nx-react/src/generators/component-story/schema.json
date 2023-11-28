@@ -6,7 +6,7 @@
   "properties": {
     "project": {
       "type": "string",
-      "description": "",
+      "description": "The project of all components",
       "$default": {
         "$source": "argv",
         "index": 0
@@ -15,7 +15,7 @@
     },
     "name": {
       "type": "string",
-      "description": "",
+      "description": "The name of component",
       "x-prompt": "Which component would you add stories to?"
     }
   },

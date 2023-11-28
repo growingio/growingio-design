@@ -22,7 +22,7 @@
     }
   },
   "include": [
-    "libs/**/*.ts",
+    "libs/*/src/**/*.ts",
     "packages/*/components/**/*.ts",
     "packages/*/components/**/*.tsx"
   ],
