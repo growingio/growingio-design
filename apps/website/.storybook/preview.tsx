@@ -9,7 +9,7 @@ import enUS from '@arco-design/web-react/es/locale/en-US';
 import zhCNMessages from './lang/zh-CN.json';
 import enUSMessages from './lang/en-US.json';
 
-import '@arco-themes/react-growingio/css/arco.css';
+import '../../../packages/base/components/index.css';
 
 export const withIntl = (storyRender) => {
   const intl = useIntl();

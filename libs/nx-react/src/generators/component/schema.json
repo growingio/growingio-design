@@ -6,12 +6,12 @@
   "properties": {
     "project": {
       "type": "string",
-      "description": "Which project is the component in?",
+      "description": "The project of all components",
       "$default": {
         "$source": "argv",
         "index": 0
       },
-      "x-prompt": "Where is the component placed?"
+      "x-prompt": "Which project is the component placed in?"
     },
     "name": {
       "type": "string",
