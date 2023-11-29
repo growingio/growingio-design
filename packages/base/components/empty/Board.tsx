@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SVGProps, Ref, forwardRef, memo } from 'react';
 const SvgComponent = (
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
+  ref: Ref<SVGSVGElement>,
 ) => (
   <svg viewBox="0 0 180 120" fill="none" ref={ref} {...props}>
     <g filter="url(#empty-board__a)">

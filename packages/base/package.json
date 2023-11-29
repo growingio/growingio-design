@@ -18,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@arco-design/web-react": "^2.56.0",
+    "@arco-iconbox/react-growingio": "0.0.2",
     "@arco-themes/react-growingio": "0.0.5",
     "clsx": "^2.0.0"
   },
