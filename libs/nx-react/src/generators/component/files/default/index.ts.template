@@ -1,0 +1,4 @@
+import <%= className %> from '@arco-design/web-react/es/<%= className %>';
+
+export type { <%= className %>Props } from '@arco-design/web-react/es/<%= className %>';
+export default <%= className %>;

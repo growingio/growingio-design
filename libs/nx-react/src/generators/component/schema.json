@@ -18,6 +18,13 @@
       "description": "The name of component",
       "x-prompt": "What name would you like to use?"
     },
+    "override": {
+      "type": "boolean",
+      "description": "When true, create override component and modify component props.",
+      "alias": "o",
+      "default": false,
+      "x-prompt": "The component is overrided?"
+    },
     "export": {
       "type": "boolean",
       "description": "When true, the component is exported from the project `index.ts` (if it exists).",

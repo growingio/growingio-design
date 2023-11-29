@@ -1,0 +1,1 @@
+import '@arco-design/web-react/es/<%= className %>/style/index.css';

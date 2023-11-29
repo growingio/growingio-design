@@ -25,14 +25,23 @@ describe('component generator', () => {
   it('should generate files', async () => {
     await componentGenerator(tree, options);
 
+    expect(tree.exists(`${sourceRoot}/${componentName}/index.ts`)).toBeTruthy();
     expect(
-      tree.exists(`${sourceRoot}/${componentName}/index.tsx`)
+      tree.exists(`${sourceRoot}/${componentName}/style/index.ts`),
+    ).toBeTruthy();
+  });
+
+  it('should generate files for overrided', async () => {
+    await componentGenerator(tree, { ...options, override: true });
+
+    expect(
+      tree.exists(`${sourceRoot}/${componentName}/index.tsx`),
     ).toBeTruthy();
     expect(
-      tree.exists(`${sourceRoot}/${componentName}/style/index.css`)
+      tree.exists(`${sourceRoot}/${componentName}/style/index.css`),
     ).toBeTruthy();
     expect(
-      tree.exists(`${sourceRoot}/${componentName}/style/index.ts`)
+      tree.exists(`${sourceRoot}/${componentName}/style/index.ts`),
     ).toBeTruthy();
   });
 });
