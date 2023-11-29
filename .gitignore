@@ -16,6 +16,7 @@ storybook-static
 # parcel
 .parcel-cache
 dist
+icons
 
 # Nx
 .nx/cache

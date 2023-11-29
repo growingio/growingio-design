@@ -1,0 +1,50 @@
+import { Canvas, Markdown, Meta, Source, Title } from '@storybook/blocks';
+import { FormattedMessage } from 'react-intl';
+import IconPanel from './IconPanel';
+import * as IconStories from './index.stories';
+import { getI18nDoc } from 'website/.storybook/preview';
+import zhCN from './props/zh-CN.md?raw';
+import enUS from './props/en-US.md?raw';
+
+<Meta of={IconStories} />
+
+<Title>
+  <FormattedMessage id="icon-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="icon-docs-desc" />
+</p>
+
+<Source
+  code={`import { IconXxx } from "growingio-design/icon";`}
+  language="tsx"
+/>
+
+<IconPanel />
+
+## Stories
+
+<h3 id="basic">
+  <FormattedMessage id="icon-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="icon-docs-basic-desc" />
+</p>
+<Canvas of={IconStories.Basic} />
+
+<h3 id="spin">
+  <FormattedMessage id="icon-docs-spin-title" />
+</h3>
+<p>
+  <FormattedMessage id="icon-docs-spin-desc" />
+</p>
+<Canvas of={IconStories.Spin} />
+
+## Props
+
+<Markdown>
+  {getI18nDoc({
+    'en-US': enUS,
+    'zh-CN': zhCN,
+  })}
+</Markdown>
