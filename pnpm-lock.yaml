@@ -158,6 +158,9 @@ importers:
 
   packages/base:
     dependencies:
+      '@arco-design/web-react':
+        specifier: ^2.56.0
+        version: 2.56.0(react-dom@18.2.0)(react@18.2.0)
       '@arco-iconbox/react-growingio':
         specifier: 0.0.2
         version: 0.0.2(react@18.2.0)
@@ -168,9 +171,6 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
     devDependencies:
-      '@arco-design/web-react':
-        specifier: ^2.56.0
-        version: 2.56.0(react-dom@18.2.0)(react@18.2.0)
       '@storybook/blocks':
         specifier: ^7.5.3
         version: 7.5.3(react-dom@18.2.0)(react@18.2.0)

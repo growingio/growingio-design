@@ -132,5 +132,19 @@
   "tag-docs-badge-tag-title": "子母标签",
   "tag-docs-badge-tag-desc": "标题区颜色固定，内容区颜色可自定义不同色值。标题区是否显示icon可配。",
   "tag-docs-avatar-tag-title": "头像标签",
-  "tag-docs-avatar-tag-desc": "在与人相关的标签可使用。浅色为默认样式，头像内容可配。"
+  "tag-docs-avatar-tag-desc": "在与人相关的标签可使用。浅色为默认样式，头像内容可配。",
+  "tooltip-basic-child": "鼠标移到上面显示文字气泡",
+  "tooltip-basic-content": "这是文字气泡内容",
+  "tooltip-basic-multipe-lines": "这是两行的文字气泡内容。这是两行的文字气泡内容。这是两行的文字气泡内容。",
+  "tooltip-docs-title": "文字气泡 Tooltip",
+  "tooltip-docs-desc": "鼠标悬停、聚焦或点击在某个组件时，弹出的文字提示。",
+  "tooltip-docs-basic-title": "基础用法",
+  "tooltip-docs-basic-desc": "鼠标移入，气泡出现，鼠标移出，气泡消失。",
+  "tooltip-docs-mini-title": "迷你尺寸",
+  "tooltip-docs-mini-desc": "适用于小场景或数字气泡样式。",
+  "tooltip-docs-position-title": "位置",
+  "tooltip-docs-position-desc": "Tooltip 支持 12 个不同的方位。分别为：上左、上、上右、下左、下、下右、左上、左、左下、右上、右、右下。",
+  "tooltip-docs-color-title": "不同颜色",
+  "tooltip-docs-color-desc": "通过 color 属性设置不同背景色的 tooltip。",
+  "tooltip-docs-with-link-title": "是否带link"
 }

@@ -21,3 +21,13 @@ export type { RadioProps } from '@arco-design/web-react/es/Radio';
 
 export { default as Space } from '@arco-design/web-react/es/Space';
 export type { SpaceProps } from '@arco-design/web-react/es/Space';
+
+export { default as Tag } from './tag';
+export type { TagProps } from './tag';
+export { default as AvatarTag } from './tag/AvatarTag';
+export type { AvatarTagProps } from './tag/AvatarTag';
+export { default as BadgeTag } from './tag/BadgeTag';
+export type { BadgeTagProps } from './tag/BadgeTag';
+
+export { default as Tooltip } from '@arco-design/web-react/es/Tooltip';
+export type { TooltipProps } from '@arco-design/web-react/es/Tooltip';

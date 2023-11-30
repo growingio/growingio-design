@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-import { useIntl } from 'react-intl';
-import { withIntl } from 'website/.storybook/preview';
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl';
 import <%= className %> from '..';
 import '../style';
 
@@ -14,5 +13,6 @@ export default meta;
 type Story = StoryObj<typeof <%= className %>>;
 
 export const Basic: Story = {
-  render: (args) => withIntl((intl) => (<<%= className %> />))
+  args: {},
+  render: (args) => (<<%= className %> {...args} />)
 };

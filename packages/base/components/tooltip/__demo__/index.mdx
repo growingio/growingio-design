@@ -1,0 +1,65 @@
+import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
+import { FormattedMessage } from 'react-intl';
+import { getI18nDoc } from 'website/.storybook/preview';
+import * as TooltipStories from './index.stories';
+import zhCN from './props/zh-CN.md?raw';
+import enUS from './props/en-US.md?raw';
+
+<Meta of={TooltipStories} />
+
+<Title>
+  <FormattedMessage id="tooltip-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="tooltip-docs-desc" />
+</p>
+
+<Source code={`import { Tooltip } from 'growingio-design';`} language="tsx" />
+
+## Stories
+
+<h3 id="basic">
+  <FormattedMessage id="tooltip-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="tooltip-docs-basic-desc" />
+</p>
+<Canvas of={TooltipStories.Basic} />
+
+<h3 id="mini">
+  <FormattedMessage id="tooltip-docs-mini-title" />
+</h3>
+<p>
+  <FormattedMessage id="tooltip-docs-mini-desc" />
+</p>
+<Canvas of={TooltipStories.Mini} />
+
+<h3 id="position">
+  <FormattedMessage id="tooltip-docs-position-title" />
+</h3>
+<p>
+  <FormattedMessage id="tooltip-docs-position-desc" />
+</p>
+<Canvas of={TooltipStories.Position} />
+
+<h3 id="color">
+  <FormattedMessage id="tooltip-docs-color-title" />
+</h3>
+<p>
+  <FormattedMessage id="tooltip-docs-color-desc" />
+</p>
+<Canvas of={TooltipStories.Color} />
+
+<h3 id="with-link">
+  <FormattedMessage id="tooltip-docs-with-link-title" />
+</h3>
+<Canvas of={TooltipStories.WithLink} />
+
+## Props
+
+<Markdown>
+  {getI18nDoc({
+    'en-US': enUS,
+    'zh-CN': zhCN,
+  })}
+</Markdown>
