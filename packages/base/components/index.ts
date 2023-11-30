@@ -9,5 +9,8 @@ export type { EmptyProps } from './empty';
 export { default as Link } from './link';
 export type { LinkProps } from './link';
 
+export { default as Radio } from './radio';
+export type { RadioProps } from './radio';
+
 export { default as Space } from './space';
 export type { SpaceProps } from './space';
