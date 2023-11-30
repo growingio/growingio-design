@@ -132,5 +132,19 @@
   "tag-docs-badge-tag-title": "Badge tag",
   "tag-docs-badge-tag-desc": "The color of the header area is fixed, and the color of the content area can be customized with different color values. Whether to display an icon in the title area is optional.",
   "tag-docs-avatar-tag-title": "Avatar tag",
-  "tag-docs-avatar-tag-desc": "Tags related to people can be used. Light color is the default, and the avatar content can be matched."
+  "tag-docs-avatar-tag-desc": "Tags related to people can be used. Light color is the default, and the avatar content can be matched.",
+  "tooltip-basic-child": "Mouse over to display tooltip",
+  "tooltip-basic-content": "This is tooltip content",
+  "tooltip-basic-multipe-lines": "This is a two-line tooltip content. This is a two-line tooltip content.",
+  "tooltip-docs-title": "Tooltip",
+  "tooltip-docs-desc": "Text prompts that pop up when you hover, focus, or click on a component.",
+  "tooltip-docs-basic-title": "Basic",
+  "tooltip-docs-basic-desc": "When the mouse is moved in, the bubble appears, and when the mouse is moved out, the bubble disappears.",
+  "tooltip-docs-mini-title": "Mini Size",
+  "tooltip-docs-mini-desc": "Suitable for small scenes or digital bubble styles.",
+  "tooltip-docs-position-title": "Position",
+  "tooltip-docs-position-desc": "Tooltip supports 12 different positions. They are: top left, top, top right, left top, left, left bottom, right top, right, right bottom, bottom left, bottom, bottom right.",
+  "tooltip-docs-color-title": "Color",
+  "tooltip-docs-color-desc": "Set tooltip with different background colors through the color property.",
+  "tooltip-docs-with-link-title": "With Link"
 }
