@@ -20,6 +20,20 @@ export async function componentGenerator(
   };
   const projectSourceRoot = getProjects(tree).get(project).sourceRoot;
 
+  if (options.export) {
+    let componentExports;
+    if (override) {
+      componentExports = `export { default as ${className} } from './${name}';\nexport type { ${className}Props } from './${name}';`;
+    } else {
+      componentExports = `export { default as ${className} } from '@arco-design/web-react/es/${className}';\nexport type { ${className}Props } from '@arco-design/web-react/es/${className}';`;
+    }
+    const indexFilePath = `${projectSourceRoot}/index.ts`;
+    const indexSource = tree.read(indexFilePath, 'utf-8');
+    if (indexSource !== null) {
+      tree.write(indexFilePath, `${indexSource}\n${componentExports}\n`);
+    }
+  }
+
   if (override) {
     generateFiles(
       tree,
@@ -37,15 +51,6 @@ export async function componentGenerator(
   }
 
   await formatFiles(tree);
-
-  if (options.export) {
-    const indexFilePath = `${projectSourceRoot}/index.ts`;
-    const indexSource = tree.read(indexFilePath, 'utf-8');
-    if (indexSource !== null) {
-      const componentExports = `export { default as ${className} } from './${name}';\nexport type { ${className}Props } from './${name}';`;
-      tree.write(indexFilePath, `${indexSource}\n${componentExports}\n`);
-    }
-  }
 }
 
 export default componentGenerator;
