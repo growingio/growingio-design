@@ -31,7 +31,7 @@ describe('component generator', () => {
     ).toBeTruthy();
   });
 
-  it('should generate files for overrided', async () => {
+  it('should generate files for overrided component', async () => {
     await componentGenerator(tree, { ...options, override: true });
 
     expect(
