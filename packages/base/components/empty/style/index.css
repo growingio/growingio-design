@@ -37,3 +37,7 @@
   width: 120px;
   height: 80px;
 }
+
+.arco-empty-small .arco-empty-description {
+  font-size: 12px;
+}
