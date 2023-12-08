@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import {} from 'react-intl';
+import { Space } from 'growingio-design/src';
 import { IconProps, IconStar, IconSync } from '..';
-import { Space } from '../..';
 
 const meta: Meta<IconProps> = {
   title: 'Base/Icon',

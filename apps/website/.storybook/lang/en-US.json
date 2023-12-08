@@ -83,6 +83,8 @@
   "empty-docs-styles-title": "Style",
   "icon-outlined": "Outlined",
   "icon-filled": "Filled",
+  "icon-outlined-general": "General icons ({count})",
+  "icon-filled-all": "Filled icons ({count})",
   "icon-docs-title": "Icon",
   "icon-docs-desc": "There are a lot of icons built into GrowingIO Design.",
   "icon-docs-basic-title": "Basic",

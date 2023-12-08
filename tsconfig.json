@@ -23,8 +23,8 @@
   },
   "include": [
     "libs/*/src/**/*.ts",
-    "packages/*/components/**/*.ts",
-    "packages/*/components/**/*.tsx"
+    "packages/*/src/**/*.ts",
+    "packages/*/src/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }
