@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import {} from 'react-intl';
 import { Space } from 'growingio-design/src';
-import { IconProps, IconStar, IconSync } from '..';
+import { IconProps, IconStar, IconSync } from '@arco-iconbox/react-growingio';
 
 const meta: Meta<IconProps> = {
   title: 'Base/Icon',

@@ -2,7 +2,7 @@ import { Canvas, Markdown, Meta, Source, Title } from '@storybook/blocks';
 import { FormattedMessage } from 'react-intl';
 import IconPanel from './IconPanel';
 import * as IconStories from './index.stories';
-import { getI18nDoc } from 'website/.storybook/preview';
+import { getI18nDoc } from '../../.storybook/preview';
 import zhCN from './props/zh-CN.md?raw';
 import enUS from './props/en-US.md?raw';
 
@@ -16,7 +16,7 @@ import enUS from './props/en-US.md?raw';
 </p>
 
 <Source
-  code={`import { IconXxx } from "growingio-design-icons";`}
+  code={`import { IconXxx } from "@arco-iconbox/react-growingio";`}
   language="tsx"
 />
 

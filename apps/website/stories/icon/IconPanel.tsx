@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IconGallery, IconItem } from '@storybook/blocks';
 import { FormattedMessage } from 'react-intl';
-import * as Icon from '..';
+import * as Icon from '@arco-iconbox/react-growingio';
 import { Radio } from 'growingio-design/src';
 import {
   GENERAL_ICONS,
