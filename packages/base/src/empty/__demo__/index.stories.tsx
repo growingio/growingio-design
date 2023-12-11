@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
 import { Space, Table, TableColumnProps } from '@arco-design/web-react';
-import { IconExclamation } from '@arco-design/web-react/icon';
+import { IconExclamation } from '@arco-iconbox/react-growingio';
 import Empty from '..';
 import Button from '../../button';
 

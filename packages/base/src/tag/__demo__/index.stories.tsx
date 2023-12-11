@@ -5,12 +5,12 @@ import {
   IconCheckCircleFill,
   IconPlus,
   IconStar,
-  IconGithub,
-  IconGitlab,
-  IconTwitter,
-  IconFacebook,
   IconSettings,
-} from '@arco-design/web-react/icon';
+  IconAlipay,
+  IconWechat,
+  IconAndroidFill,
+  IconAppleFill,
+} from '@arco-iconbox/react-growingio';
 import {
   Divider,
   Input,
@@ -397,17 +397,17 @@ export const Icon: Story = {
   args: {},
   render: (args) => (
     <Space size="large">
-      <Tag {...args} color="gray" icon={<IconGithub />}>
-        GitHub
+      <Tag {...args} icon={<IconAndroidFill />}>
+        Android
       </Tag>
-      <Tag {...args} color="orangered" icon={<IconGitlab />}>
-        GitLab
+      <Tag {...args} color="gray" icon={<IconAppleFill />}>
+        iOS
       </Tag>
-      <Tag {...args} color="blue" icon={<IconTwitter />}>
-        Twitter
+      <Tag {...args} color="blue" icon={<IconAlipay />}>
+        Alipay
       </Tag>
-      <Tag {...args} color="arcoblue" icon={<IconFacebook />}>
-        Facebook
+      <Tag {...args} color="green" icon={<IconWechat />}>
+        Wechat
       </Tag>
     </Space>
   ),

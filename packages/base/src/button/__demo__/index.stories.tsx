@@ -11,7 +11,7 @@ import {
   IconDown,
   IconMore,
   IconMessage,
-} from '@arco-design/web-react/icon';
+} from '@arco-iconbox/react-growingio';
 import { FormattedMessage } from 'react-intl';
 import Button from '..';
 
