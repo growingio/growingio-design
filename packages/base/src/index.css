@@ -2,5 +2,6 @@
 @import './_core/tokens.css';
 @import './button/style/index.css';
 @import './empty/style/index.css';
+@import './result/style/index.css';
 @import './tag/style/index.css';
 @import './tooltip/style/index.css';
