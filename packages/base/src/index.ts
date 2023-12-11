@@ -31,3 +31,6 @@ export type { BadgeTagProps } from './tag/BadgeTag';
 
 export { default as Tooltip } from '@arco-design/web-react/es/Tooltip';
 export type { TooltipProps } from '@arco-design/web-react/es/Tooltip';
+
+export { default as Result } from './result';
+export type { ResultProps } from './result';
