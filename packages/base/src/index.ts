@@ -46,3 +46,6 @@ export type { DividerProps } from '@arco-design/web-react/es/Divider';
 
 export { default as Menu } from '@arco-design/web-react/es/Menu';
 export type { MenuProps } from '@arco-design/web-react/es/Menu';
+
+export { default as Input } from './input';
+export type { InputProps } from './input';
