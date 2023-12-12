@@ -1,0 +1,140 @@
+import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
+import { FormattedMessage } from 'react-intl';
+import { getI18nDoc } from 'website/.storybook/preview';
+import * as InputStories from './index.stories';
+import zhCN from './props/zh-CN.md?raw';
+import enUS from './props/en-US.md?raw';
+
+<Meta of={InputStories} />
+
+<Title>
+  <FormattedMessage id="input-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="input-docs-desc" />
+</p>
+
+<Source code={`import { Input } from 'growingio-design';`} language="tsx" />
+
+## Stories
+
+<h3 id="basic">
+  <FormattedMessage id="input-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-basic-desc" />
+</p>
+<Canvas of={InputStories.Basic} />
+
+<h3 id="status">
+  <FormattedMessage id="input-docs-status-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-status-desc" />
+</p>
+<Canvas of={InputStories.Status} />
+
+<h3 id="size">
+  <FormattedMessage id="input-docs-size-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-size-desc" />
+</p>
+<Canvas of={InputStories.Size} />
+
+<h3 id="label">
+  <FormattedMessage id="input-docs-label-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-label-desc" />
+</p>
+<Canvas of={InputStories.Label} />
+
+<h3 id="prefix-suffix">
+  <FormattedMessage id="input-docs-prefix-suffix-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-prefix-suffix-desc" />
+</p>
+<Canvas of={InputStories.PrefixSuffix} />
+
+<h3 id="search">
+  <FormattedMessage id="input-docs-search-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-search-desc" />
+</p>
+<Canvas of={InputStories.Search} />
+
+<h3 id="search-with-loading">
+  <FormattedMessage id="input-docs-search-with-loading-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-search-with-loading-desc" />
+</p>
+<Canvas of={InputStories.SearchWithLoading} />
+
+<h3 id="input-group">
+  <FormattedMessage id="input-docs-input-group-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-input-group-desc" />
+</p>
+<Canvas of={InputStories.InputGroup} />
+
+<h3 id="length">
+  <FormattedMessage id="input-docs-length-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-length-desc" />
+</p>
+<Canvas of={InputStories.Length} />
+
+<h3 id="text-area">
+  <FormattedMessage id="input-docs-text-area-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-text-area-desc" />
+</p>
+<Canvas of={InputStories.TextArea} />
+
+<h3 id="auto-size-text-area">
+  <FormattedMessage id="input-docs-auto-size-text-area-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-auto-size-text-area-desc" />
+</p>
+<Canvas of={InputStories.AutoSizeTextArea} />
+
+<h3 id="password">
+  <FormattedMessage id="input-docs-password-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-password-desc" />
+</p>
+<Canvas of={InputStories.Password} />
+
+<h3 id="normalize-value">
+  <FormattedMessage id="input-docs-normalize-value-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-normalize-value-desc" />
+</p>
+<Canvas of={InputStories.NormalizeValue} />
+
+<h3 id="auto-width">
+  <FormattedMessage id="input-docs-auto-width-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-docs-auto-width-desc" />
+</p>
+<Canvas of={InputStories.AutoWidth} />
+
+## Props
+
+<Markdown>
+  {getI18nDoc({
+    'en-US': enUS,
+    'zh-CN': zhCN,
+  })}
+</Markdown>

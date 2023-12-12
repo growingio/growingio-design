@@ -15,7 +15,10 @@ const ForwardRefSelect = React.forwardRef<SelectHandle, SelectProps>(
   SelectFunction,
 );
 
-const Select = ForwardRefSelect as typeof ForwardRefSelect;
+const Select = ForwardRefSelect as typeof ForwardRefSelect & {
+  Option: typeof ArcoSelect.Option;
+};
 Select.displayName = 'Select';
+Select.Option = ArcoSelect.Option;
 
 export default Select;
