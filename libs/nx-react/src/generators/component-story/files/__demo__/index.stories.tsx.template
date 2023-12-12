@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import <%= className %> from '..';
-import '../style';
 
 const meta: Meta<typeof <%= className %>> = {
   component: <%= className %>,
