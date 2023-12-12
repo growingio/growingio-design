@@ -37,3 +37,6 @@ export type { ResultProps } from './result';
 
 export { default as Select } from './select';
 export type { SelectProps } from './select';
+
+export { default as Typography } from '@arco-design/web-react/es/Typography';
+export type { TypographyProps } from '@arco-design/web-react/es/Typography';
