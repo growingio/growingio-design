@@ -1,6 +1,31 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "growingio-design",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/base/src",
-  "projectType": "library"
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "main": "packages/base/src/index.ts",
+        "outputPath": "dist",
+        "outputFileName": "index.cjs",
+        "assets": [],
+        "platform": "node"
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true,
+          "tsConfig": "tsconfig.json"
+        }
+      }
+    }
+  }
 }
