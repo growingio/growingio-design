@@ -40,3 +40,6 @@ export type { SelectProps } from './select';
 
 export { default as Typography } from '@arco-design/web-react/es/Typography';
 export type { TypographyProps } from '@arco-design/web-react/es/Typography';
+
+export { default as Divider } from '@arco-design/web-react/es/Divider';
+export type { DividerProps } from '@arco-design/web-react/es/Divider';
