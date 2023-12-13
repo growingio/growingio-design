@@ -49,3 +49,6 @@ export type { MenuProps } from '@arco-design/web-react/es/Menu';
 
 export { default as Input } from './input';
 export type { InputProps } from './input';
+
+export { default as Dropdown } from '@arco-design/web-react/es/Dropdown';
+export type { DropdownProps } from '@arco-design/web-react/es/Dropdown';

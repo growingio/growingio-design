@@ -1,0 +1,100 @@
+import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
+import { FormattedMessage } from 'react-intl';
+import { getI18nDoc } from 'website/.storybook/preview';
+import * as DropdownStories from './index.stories';
+import zhCN from './props/zh-CN.md?raw';
+import enUS from './props/en-US.md?raw';
+
+<Meta of={DropdownStories} />
+
+<Title>
+  <FormattedMessage id="dropdown-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="dropdown-docs-desc" />
+</p>
+
+<Source code={`import { Dropdown } from 'growingio-design';`} language="tsx" />
+
+## Stories
+
+<h3 id="basic">
+  <FormattedMessage id="dropdown-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-basic-desc" />
+</p>
+<Canvas of={DropdownStories.Basic} />
+
+<h3 id="position">
+  <FormattedMessage id="dropdown-docs-position-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-position-desc" />
+</p>
+<Canvas of={DropdownStories.Position} />
+
+<h3 id="extra">
+  <FormattedMessage id="dropdown-docs-extra-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-extra-desc" />
+</p>
+<Canvas of={DropdownStories.Extra} />
+
+<h3 id="trigger">
+  <FormattedMessage id="dropdown-docs-trigger-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-trigger-desc" />
+</p>
+<Canvas of={DropdownStories.Trigger} />
+
+<h3 id="button">
+  <FormattedMessage id="dropdown-docs-button-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-button-desc" />
+</p>
+<Canvas of={DropdownStories.DropdownButton} />
+
+<h3 id="sub-menu">
+  <FormattedMessage id="dropdown-docs-sub-menu-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-sub-menu-desc" />
+</p>
+<Canvas of={DropdownStories.SubMenu} />
+
+<h3 id="group-menu">
+  <FormattedMessage id="dropdown-docs-group-menu-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-group-menu-desc" />
+</p>
+<Canvas of={DropdownStories.GroupMenu} />
+
+<h3 id="right-click-menu">
+  <FormattedMessage id="dropdown-docs-right-click-menu-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-right-click-menu-desc" />
+</p>
+<Canvas of={DropdownStories.RightClickMenu} />
+
+<h3 id="controlled-visible">
+  <FormattedMessage id="dropdown-docs-controlled-visible-title" />
+</h3>
+<p>
+  <FormattedMessage id="dropdown-docs-controlled-visible-desc" />
+</p>
+<Canvas of={DropdownStories.ControlledVisible} />
+
+## Props
+
+<Markdown>
+  {getI18nDoc({
+    'en-US': enUS,
+    'zh-CN': zhCN,
+  })}
+</Markdown>
