@@ -43,3 +43,6 @@ export type { TypographyProps } from '@arco-design/web-react/es/Typography';
 
 export { default as Divider } from '@arco-design/web-react/es/Divider';
 export type { DividerProps } from '@arco-design/web-react/es/Divider';
+
+export { default as Menu } from '@arco-design/web-react/es/Menu';
+export type { MenuProps } from '@arco-design/web-react/es/Menu';
