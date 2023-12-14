@@ -21,7 +21,7 @@
     "clsx": "^2.0.0"
   },
   "devDependencies": {
-    "@arco-iconbox/react-growingio": "0.0.3",
+    "@arco-iconbox/react-growingio": "0.0.4",
     "@storybook/blocks": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "react": "^18.2.0",

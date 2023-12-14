@@ -1,4 +1,7 @@
 const GENERAL_ICONS = [
+  'Yuan',
+  'Network',
+  'Debug',
   'Calendarclock',
   'Module',
   'Corporations',
@@ -131,9 +134,29 @@ const GENERAL_ICONS = [
   'Copyright',
 ];
 
-const USER_ICONS = ['Idcard', 'User', 'UserAdd', 'UserGroup', 'Manager'];
+const USER_ICONS = [
+  'UserBars',
+  'UserTgi',
+  'UserSearch',
+  'Idcard',
+  'User',
+  'UserAdd',
+  'UserGroup',
+  'Manager',
+];
 
 const DATA_ICONS = [
+  'Cursor',
+  'Analyze',
+  'Terminal',
+  'Event',
+  'Sql',
+  'Condition',
+  'MixedColumnChart',
+  'MixedLineChart',
+  'Calculate',
+  'Variable',
+  'KeyValuePair',
   'Nav',
   'Gauge',
   'Compass',
@@ -198,6 +221,8 @@ const DIRECTION_ICONS = [
 ];
 
 const TIPS_ICONS = [
+  'MinusSquare',
+  'PlusSquare',
   'PlusCircle',
   'ExclamationCircle',
   'InfoCircle',
@@ -219,6 +244,8 @@ const TIPS_ICONS = [
 ];
 
 const PLATFORM_DEVICE_ICONS = [
+  'Windows',
+  'Tablet',
   'Desktop',
   'Apple',
   'Mobile',
@@ -288,6 +315,8 @@ const MEDIA_ICONS = [
 ];
 
 const FILLED_ICONS = [
+  'WindowsFill',
+  'TabletFill',
   'CloseCircleFill',
   'CheckCircleFill',
   'InfoCircleFill',

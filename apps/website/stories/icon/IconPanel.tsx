@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { IconGallery, IconItem } from '@storybook/blocks';
 import { FormattedMessage } from 'react-intl';
 import * as Icon from '@arco-iconbox/react-growingio';
@@ -42,7 +42,7 @@ const renderIcons = (icons: string[], messageId: string) => (
             console.info('[*] icon: ', name);
           }
           return (
-            <IconItem name={name}>
+            <IconItem key={name} name={name}>
               {React.createElement(Icon[iconElement])}
             </IconItem>
           );
