@@ -1,4 +1,4 @@
-export type SizeType = 'mini' | 'small' | 'medium' | 'large';
+export type SizeType = 'mini' | 'small' | 'default' | 'large';
 export type ColorType =
   | 'red'
   | 'orangered'

@@ -354,7 +354,7 @@ export const Size: Story = {
       <Tag {...args} size="large">
         <FormattedMessage id="large" />
       </Tag>
-      <Tag {...args} size="medium">
+      <Tag {...args} size="default">
         <FormattedMessage id="medium" />
       </Tag>
       <Tag {...args} size="small">
@@ -445,7 +445,7 @@ export const BadgeTagBasic: BadgeTagStory = {
         <BadgeTag {...args} size="large" />
       </Grid.Col>
       <Grid.Col span={6}>
-        <BadgeTag {...args} size="medium" />
+        <BadgeTag {...args} size="default" />
       </Grid.Col>
       <Grid.Col span={6}>
         <BadgeTag {...args} />
@@ -458,7 +458,7 @@ export const BadgeTagBasic: BadgeTagStory = {
         <BadgeTag {...args} icon={<IconSettings />} size="large" />
       </Grid.Col>
       <Grid.Col span={6}>
-        <BadgeTag {...args} icon={<IconSettings />} size="medium" />
+        <BadgeTag {...args} icon={<IconSettings />} size="default" />
       </Grid.Col>
       <Grid.Col span={6}>
         <BadgeTag {...args} icon={<IconSettings />} size="small" />
@@ -497,7 +497,7 @@ export const AvatarTagBasic: AvatarTagStory = {
         <AvatarTag {...args} size="large" />
       </Grid.Col>
       <Grid.Col span={6}>
-        <AvatarTag {...args} size="medium" />
+        <AvatarTag {...args} size="default" />
       </Grid.Col>
       <Grid.Col span={6}>
         <AvatarTag {...args} />
@@ -510,7 +510,7 @@ export const AvatarTagBasic: AvatarTagStory = {
         <AvatarTag {...args} mode="dark" size="large" />
       </Grid.Col>
       <Grid.Col span={6}>
-        <AvatarTag {...args} mode="dark" size="medium" />
+        <AvatarTag {...args} mode="dark" size="default" />
       </Grid.Col>
       <Grid.Col span={6}>
         <AvatarTag {...args} mode="dark" size="small" />

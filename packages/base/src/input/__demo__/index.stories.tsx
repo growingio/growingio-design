@@ -10,6 +10,7 @@ import {
 } from '@arco-iconbox/react-growingio';
 import Input from '..';
 import { Space, Radio, Select, Typography, Divider } from '../..';
+import { SizeType } from '../../_core/types';
 
 const meta: Meta<typeof Input> = {
   component: Input,
@@ -64,9 +65,7 @@ export const Size: Story = {
   },
   render: (args) => {
     const intl = useIntl();
-    const [size, setSize] = useState<'mini' | 'small' | 'default' | 'large'>(
-      'default',
-    );
+    const [size, setSize] = useState<SizeType>('default');
     const sizeOptions = [
       {
         name: intl.formatMessage({ id: 'mini' }),

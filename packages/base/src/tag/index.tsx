@@ -21,7 +21,7 @@ const TagFunction = (props: TagProps, ref: React.Ref<unknown>) => {
     case 'mini':
       arcoSize = 'small';
       break;
-    case 'medium':
+    case 'default':
       arcoSize = 'medium';
       break;
     case 'large':

@@ -267,9 +267,9 @@
 .arco-avatar-tag-large {
   padding: 5px 8px;
 }
-.arco-badge-tag-medium .arco-badge-tag-title,
-.arco-badge-tag-medium .arco-badge-tag-content,
-.arco-avatar-tag-medium {
+.arco-badge-tag-default .arco-badge-tag-title,
+.arco-badge-tag-default .arco-badge-tag-content,
+.arco-avatar-tag-default {
   padding: 3px 8px;
 }
 .arco-badge-tag-small .arco-badge-tag-title,
@@ -314,7 +314,7 @@
   width: 22px;
   height: 22px;
 }
-.arco-avatar-tag-medium .arco-avatar-tag-avatar {
+.arco-avatar-tag-default .arco-avatar-tag-avatar {
   width: 20px;
   height: 20px;
 }

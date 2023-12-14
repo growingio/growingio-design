@@ -88,7 +88,7 @@ export const ButtonSizes: Story = {
       <Button {...args} size="large">
         <FormattedMessage id="large" />
       </Button>
-      <Button {...args} size="medium">
+      <Button {...args} size="default">
         <FormattedMessage id="medium" />
       </Button>
       <Button {...args} size="small">
