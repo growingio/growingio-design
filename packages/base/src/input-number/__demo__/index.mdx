@@ -1,0 +1,87 @@
+import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
+import { FormattedMessage } from 'react-intl';
+import { getI18nDoc } from 'website/.storybook/preview';
+import * as InputNumberStories from './index.stories';
+import zhCN from './props/zh-CN.md?raw';
+import enUS from './props/en-US.md?raw';
+
+<Meta of={InputNumberStories} />
+
+<Title>
+  <FormattedMessage id="input-number-docs-title" />
+</Title>
+<p>
+  <FormattedMessage id="input-number-docs-desc" />
+</p>
+
+<Source
+  code={`import { InputNumber } from 'growingio-design';`}
+  language="tsx"
+/>
+
+## Stories
+
+<h3 id="basic">
+  <FormattedMessage id="input-number-docs-basic-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-basic-desc" />
+</p>
+<Canvas of={InputNumberStories.Basic} />
+
+<h3 id="button">
+  <FormattedMessage id="input-number-docs-button-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-button-desc" />
+</p>
+<Canvas of={InputNumberStories.Button} />
+
+<h3 id="size">
+  <FormattedMessage id="input-number-docs-size-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-size-desc" />
+</p>
+<Canvas of={InputNumberStories.Size} />
+
+<h3 id="precision-step">
+  <FormattedMessage id="input-number-docs-precision-step-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-precision-step-desc" />
+</p>
+<Canvas of={InputNumberStories.PrecisionAndStep} />
+
+<h3 id="formatter">
+  <FormattedMessage id="input-number-docs-formatter-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-formatter-desc" />
+</p>
+<Canvas of={InputNumberStories.Formatter} />
+
+<h3 id="prefix-suffix">
+  <FormattedMessage id="input-number-docs-prefix-suffix-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-prefix-suffix-desc" />
+</p>
+<Canvas of={InputNumberStories.PrefixAndSuffix} />
+
+<h3 id="strict-mode">
+  <FormattedMessage id="input-number-docs-strict-mode-title" />
+</h3>
+<p>
+  <FormattedMessage id="input-number-docs-strict-mode-desc" />
+</p>
+<Canvas of={InputNumberStories.StrictMode} />
+
+## Props
+
+<Markdown>
+  {getI18nDoc({
+    'en-US': enUS,
+    'zh-CN': zhCN,
+  })}
+</Markdown>
