@@ -52,3 +52,6 @@ export type { InputProps } from './input';
 
 export { default as Dropdown } from '@arco-design/web-react/es/Dropdown';
 export type { DropdownProps } from '@arco-design/web-react/es/Dropdown';
+
+export { default as InputNumber } from '@arco-design/web-react/es/InputNumber';
+export type { InputNumberProps } from '@arco-design/web-react/es/InputNumber';
