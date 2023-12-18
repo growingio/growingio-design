@@ -144,6 +144,7 @@ const preview: Preview = {
       container: customDocsContainer,
       toc: true,
     },
+    layout: 'centered',
   },
 };
 
