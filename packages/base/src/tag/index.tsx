@@ -5,6 +5,7 @@ import {
 } from '@arco-design/web-react/es/Tag';
 import { SizeType } from '../_core/types';
 import clsx from 'clsx';
+import colors from '../_core/colors';
 
 export type TagProps = Omit<ArcoTagProps, 'size'> & {
   size?: SizeType;
@@ -13,9 +14,23 @@ export type TagProps = Omit<ArcoTagProps, 'size'> & {
   disabled?: boolean;
 };
 
+const arcoColors = [
+  'blue',
+  'green',
+  'orange',
+  'gold',
+  'purple',
+  'magenta',
+  'red',
+  'lime',
+  'cyan',
+  'gray',
+];
+
 const TagFunction = (props: TagProps, ref: React.Ref<unknown>) => {
   const prefixCls = 'arco-tag';
-  const { size, type, status, disabled, className, ...restProps } = props;
+  const { size, type, status, disabled, className, color, ...restProps } =
+    props;
   let arcoSize;
   switch (size) {
     case 'mini':
@@ -31,15 +46,25 @@ const TagFunction = (props: TagProps, ref: React.Ref<unknown>) => {
     default:
       arcoSize = 'default';
   }
+  const isGioColor = colors.includes(color) && !arcoColors.includes(color);
   const cls = clsx(
     {
       [`${prefixCls}-${type}`]: !!type,
       [`${prefixCls}-${status}`]: !!status,
       [`${prefixCls}-disabled`]: !!disabled,
+      [`${prefixCls}-${color}`]: isGioColor,
     },
     className,
   );
-  return <ArcoTag ref={ref} {...restProps} size={arcoSize} className={cls} />;
+  return (
+    <ArcoTag
+      ref={ref}
+      {...restProps}
+      size={arcoSize}
+      className={cls}
+      color={isGioColor ? undefined : color}
+    />
+  );
 };
 
 const ForwardRefTag = React.forwardRef<HTMLElement, TagProps>(TagFunction);
