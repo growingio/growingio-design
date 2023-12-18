@@ -61,40 +61,40 @@ export const Position: Story = {
       }}
     >
       <Tooltip {...args} position="tl">
-        <Button style={getStyle(0, 220)}>TL</Button>
+        <Button style={getStyle(0, 140)}>TL</Button>
       </Tooltip>
       <Tooltip {...args} position="top">
-        <Button style={getStyle(0, 330)}>Top</Button>
+        <Button style={getStyle(0, 250)}>Top</Button>
       </Tooltip>
       <Tooltip {...args} position="tr">
-        <Button style={getStyle(0, 440)}>TR</Button>
+        <Button style={getStyle(0, 360)}>TR</Button>
       </Tooltip>
       <Tooltip {...args} position="lt">
-        <Button style={getStyle(60, 160)}>LT</Button>
+        <Button style={getStyle(60, 80)}>LT</Button>
       </Tooltip>
       <Tooltip {...args} position="left">
-        <Button style={getStyle(120, 160)}>Left</Button>
+        <Button style={getStyle(120, 80)}>Left</Button>
       </Tooltip>
       <Tooltip {...args} position="lb">
-        <Button style={getStyle(180, 160)}>LB</Button>
+        <Button style={getStyle(180, 80)}>LB</Button>
       </Tooltip>
       <Tooltip {...args} position="rt">
-        <Button style={getStyle(60, 500)}>RT</Button>
+        <Button style={getStyle(60, 420)}>RT</Button>
       </Tooltip>
       <Tooltip {...args} position="right">
-        <Button style={getStyle(120, 500)}>Right</Button>
+        <Button style={getStyle(120, 420)}>Right</Button>
       </Tooltip>
       <Tooltip {...args} position="rb">
-        <Button style={getStyle(180, 500)}>RB</Button>
+        <Button style={getStyle(180, 420)}>RB</Button>
       </Tooltip>
       <Tooltip {...args} position="bl">
-        <Button style={getStyle(240, 220)}>BL</Button>
+        <Button style={getStyle(240, 140)}>BL</Button>
       </Tooltip>
       <Tooltip {...args} position="bottom">
-        <Button style={getStyle(240, 330)}>Bottom</Button>
+        <Button style={getStyle(240, 250)}>Bottom</Button>
       </Tooltip>
       <Tooltip {...args} position="br">
-        <Button style={getStyle(240, 440)}>BR</Button>
+        <Button style={getStyle(240, 360)}>BR</Button>
       </Tooltip>
     </div>
   ),

@@ -25,9 +25,15 @@
   transform: rotate(180deg);
 }
 
-.arco-trigger[trigger-placement='left'] .arco-trigger-arrow,
-.arco-trigger[trigger-placement='lt'] .arco-trigger-arrow,
-.arco-trigger[trigger-placement='lb'] .arco-trigger-arrow {
+.arco-trigger[trigger-placement='left']
+  > .arco-trigger-arrow-container
+  .arco-trigger-arrow,
+.arco-trigger[trigger-placement='lt']
+  > .arco-trigger-arrow-container
+  .arco-trigger-arrow,
+.arco-trigger[trigger-placement='lb']
+  > .arco-trigger-arrow-container
+  .arco-trigger-arrow {
   border-radius: 0px;
   right: -5px;
   margin-top: -10px;
@@ -35,9 +41,15 @@
   transform-origin: bottom right;
 }
 
-.arco-trigger[trigger-placement='right'] .arco-trigger-arrow,
-.arco-trigger[trigger-placement='rt'] .arco-trigger-arrow,
-.arco-trigger[trigger-placement='rb'] .arco-trigger-arrow {
+.arco-trigger[trigger-placement='right']
+  > .arco-trigger-arrow-container
+  .arco-trigger-arrow,
+.arco-trigger[trigger-placement='rt']
+  > .arco-trigger-arrow-container
+  .arco-trigger-arrow,
+.arco-trigger[trigger-placement='rb']
+  > .arco-trigger-arrow-container
+  .arco-trigger-arrow {
   border-radius: 0px;
   left: 0;
   margin-top: -5px;
