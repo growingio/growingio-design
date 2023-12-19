@@ -237,15 +237,24 @@
   background-color: rgb(var(--gioorange-2));
   border: 1px solid #0000;
 }
+.arco-tag-checked.arco-tag-gioorange.arco-tag-bordered {
+  border-color: rgb(var(--gioorange-6));
+}
 .arco-tag-checked.arco-tag-primary {
   color: rgb(var(--primary-6));
   background-color: rgb(var(--primary-2));
   border: 1px solid #0000;
 }
+.arco-tag-checked.arco-tag-primary.arco-tag-bordered {
+  border-color: rgb(var(--primary-6));
+}
 .arco-tag-checked.arco-tag-skyblue {
   color: rgb(var(--skyblue-6));
   background-color: rgb(var(--skyblue-2));
   border: 1px solid #0000;
+}
+.arco-tag-checked.arco-tag-skyblue.arco-tag-bordered {
+  border-color: rgb(var(--skyblue-6));
 }
 
 /* badge-tag */
