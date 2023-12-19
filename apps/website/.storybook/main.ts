@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import { type StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: [
@@ -11,6 +11,12 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/react-vite',
     options: {},
+  },
+  async viteFinal(config) {
+    return {
+      ...config,
+      resolve: { dedupe: ['@storybook/blocks', '@storybook/react'] },
+    };
   },
 };
 export default config;
