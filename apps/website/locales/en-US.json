@@ -1,0 +1,19 @@
+{
+  "color-blue": "Blue",
+  "color-cyan": "Cyan",
+  "color-docs-desc": "A set of color algorithms based on the dynamic gradient is embedded in the component library. The palette contains 13 common colors, with each color split into 10 gradients. Usually, we use color number 6 as the primary color in the palette.",
+  "color-docs-title": "Colors",
+  "color-gioorange": "GrowingIO Orange",
+  "color-gold": "Gold",
+  "color-gray": "Gray",
+  "color-green": "Green",
+  "color-lime": "Lime",
+  "color-magenta": "Magenta",
+  "color-orange": "Orange",
+  "color-primary": "GrowingIO Blue",
+  "color-purple": "Purple",
+  "color-red": "Red",
+  "icon-filled": "Filled",
+  "icon-outlined": "Outlined",
+  "color-skyblue": "Sky Blue"
+}
