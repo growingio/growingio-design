@@ -1,0 +1,8 @@
+commit_message: 'docs(%locale%): new translations from crowdin'
+pull_request_labels:
+  - crowdin
+  - l10n
+
+files:
+  - source: /apps/website/locales/zh-CN.json
+    translation: /apps/website/locales/%locale%.json

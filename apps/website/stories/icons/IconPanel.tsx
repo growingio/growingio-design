@@ -79,10 +79,10 @@ export default function () {
       <div style={{ display: 'flex', marginTop: 48, marginBottom: 24 }}>
         <Radio.Group type="button" value={iconType} onChange={setIconType}>
           <Radio value="outlined">
-            <FormattedMessage id="icon-outlined" />
+            <FormattedMessage id="icon-outlined" defaultMessage="线性图标" />
           </Radio>
           <Radio value="filled">
-            <FormattedMessage id="icon-filled" />
+            <FormattedMessage id="icon-filled" defaultMessage="面性图标" />
           </Radio>
         </Radio.Group>
       </div>
