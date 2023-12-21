@@ -12,7 +12,6 @@ import {
   IconMore,
   IconMessage,
 } from '@arco-iconbox/react-growingio';
-import { FormattedMessage } from 'react-intl';
 import Button from '..';
 
 const meta: Meta<typeof Button> = {
@@ -24,24 +23,16 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const BasicButtons: Story = {
-  args: {},
+  args: {
+    children: 'Button',
+  },
   render: (args) => (
     <Space size="large">
-      <Button {...args} type="primary">
-        <FormattedMessage id="primary" />
-      </Button>
-      <Button {...args} type="default">
-        <FormattedMessage id="default" />
-      </Button>
-      <Button {...args} type="dashed">
-        <FormattedMessage id="dashed" />
-      </Button>
-      <Button {...args} type="outline">
-        <FormattedMessage id="outline" />
-      </Button>
-      <Button {...args} type="text">
-        <FormattedMessage id="text" />
-      </Button>
+      <Button {...args} type="primary" />
+      <Button {...args} type="default" />
+      <Button {...args} type="dashed" />
+      <Button {...args} type="outline" />
+      <Button {...args} type="text" />
     </Space>
   ),
 };
@@ -53,11 +44,11 @@ export const IconButtons: Story = {
   render: (args) => (
     <Space size="large">
       <Button {...args} icon={<IconDelete />}>
-        <FormattedMessage id="delete" />
+        Delete
       </Button>
       <Button {...args} icon={<IconPlus />} />
       <Button {...args}>
-        <FormattedMessage id="delete" />
+        Delete
         <IconDelete />
       </Button>
     </Space>
@@ -70,10 +61,10 @@ export const ButtonShapes: Story = {
       <Button {...args} type="primary" icon={<IconPlus />} />
       <Button {...args} shape="circle" type="primary" icon={<IconPlus />} />
       <Button {...args} shape="round" type="primary">
-        <FormattedMessage id="round" />
+        Round
       </Button>
       <Button {...args} shape="square" type="primary">
-        <FormattedMessage id="square" />
+        Square
       </Button>
     </Space>
   ),
@@ -86,93 +77,56 @@ export const ButtonSizes: Story = {
   render: (args) => (
     <Space size="large" align="start">
       <Button {...args} size="large">
-        <FormattedMessage id="large" />
+        Large
       </Button>
       <Button {...args} size="default">
-        <FormattedMessage id="medium" />
+        Medium
       </Button>
       <Button {...args} size="small">
-        <FormattedMessage id="small" />
+        Small
       </Button>
       <Button {...args} size="mini">
-        <FormattedMessage id="mini" />
+        Mini
       </Button>
     </Space>
   ),
 };
 
 export const ButtonStatus: Story = {
+  args: {
+    children: 'Button',
+  },
   render: (args) => (
     <Space size="large" direction="vertical">
       <Space size="large">
-        <Button {...args} type="primary" status="primary">
-          <FormattedMessage id="primary" />
-        </Button>
-        <Button {...args} type="dashed" status="primary">
-          <FormattedMessage id="primary" />
-        </Button>
-        <Button {...args} type="outline" status="primary">
-          <FormattedMessage id="primary" />
-        </Button>
-        <Button {...args} type="text" status="primary">
-          <FormattedMessage id="primary" />
-        </Button>
+        <Button {...args} type="primary" status="primary" />
+        <Button {...args} type="dashed" status="primary" />
+        <Button {...args} type="outline" status="primary" />
+        <Button {...args} type="text" status="primary" />
       </Space>
       <Space size="large">
-        <Button {...args} type="primary" status="default">
-          <FormattedMessage id="default" />
-        </Button>
-        <Button {...args} type="dashed" status="default">
-          <FormattedMessage id="default" />
-        </Button>
-        <Button {...args} type="outline" status="default">
-          <FormattedMessage id="default" />
-        </Button>
-        <Button {...args} type="text" status="default">
-          <FormattedMessage id="default" />
-        </Button>
+        <Button {...args} type="primary" status="default" />
+        <Button {...args} type="dashed" status="default" />
+        <Button {...args} type="outline" status="default" />
+        <Button {...args} type="text" status="default" />
       </Space>
       <Space size="large">
-        <Button {...args} type="primary" status="warning">
-          <FormattedMessage id="warning" />
-        </Button>
-        <Button {...args} type="dashed" status="warning">
-          <FormattedMessage id="warning" />
-        </Button>
-        <Button {...args} type="outline" status="warning">
-          <FormattedMessage id="warning" />
-        </Button>
-        <Button {...args} type="text" status="warning">
-          <FormattedMessage id="warning" />
-        </Button>
+        <Button {...args} type="primary" status="warning" />
+        <Button {...args} type="dashed" status="warning" />
+        <Button {...args} type="outline" status="warning" />
+        <Button {...args} type="text" status="warning" />
       </Space>
       <Space size="large">
-        <Button {...args} type="primary" status="danger">
-          <FormattedMessage id="danger" />
-        </Button>
-        <Button {...args} type="dashed" status="danger">
-          <FormattedMessage id="danger" />
-        </Button>
-        <Button {...args} type="outline" status="danger">
-          <FormattedMessage id="danger" />
-        </Button>
-        <Button {...args} type="text" status="danger">
-          <FormattedMessage id="danger" />
-        </Button>
+        <Button {...args} type="primary" status="danger" />
+        <Button {...args} type="dashed" status="danger" />
+        <Button {...args} type="outline" status="danger" />
+        <Button {...args} type="text" status="danger" />
       </Space>
       <Space size="large">
-        <Button {...args} type="primary" status="success">
-          <FormattedMessage id="success" />
-        </Button>
-        <Button {...args} type="dashed" status="success">
-          <FormattedMessage id="success" />
-        </Button>
-        <Button {...args} type="outline" status="success">
-          <FormattedMessage id="success" />
-        </Button>
-        <Button {...args} type="text" status="success">
-          <FormattedMessage id="success" />
-        </Button>
+        <Button {...args} type="primary" status="success" />
+        <Button {...args} type="dashed" status="success" />
+        <Button {...args} type="outline" status="success" />
+        <Button {...args} type="text" status="success" />
       </Space>
     </Space>
   ),
@@ -218,17 +172,17 @@ export const LoadingButtons: Story = {
         <Grid.Row gutter={[24, 12]}>
           <Grid.Col span={8}>
             <Button {...args} type="primary" loading>
-              <FormattedMessage id="button-loading" />
+              Loading
             </Button>
           </Grid.Col>
           <Grid.Col span={8}>
             <Button {...args} type="default" loading>
-              <FormattedMessage id="button-loading" />
+              Loading
             </Button>
           </Grid.Col>
           <Grid.Col span={8}>
             <Button {...args} type="dashed" loading>
-              <FormattedMessage id="button-loading" />
+              Loading
             </Button>
           </Grid.Col>
           <Grid.Col span={8}>
@@ -247,7 +201,7 @@ export const LoadingButtons: Story = {
               loading={buttonLoading}
               onClick={onClickButton}
             >
-              <FormattedMessage id="button-click-me" />
+              Click Me
             </Button>
           </Grid.Col>
           <Grid.Col span={8}>
@@ -258,13 +212,13 @@ export const LoadingButtons: Story = {
               onClick={onClickIconButton}
             >
               {!iconButtonLoading && <IconPlus />}
-              <FormattedMessage id="button-click-me" />
+              Click Me
             </Button>
           </Grid.Col>
         </Grid.Row>
 
         <Divider style={{ width: 440, minWidth: 440 }}>
-          <FormattedMessage id="button-loading-fixed-width" />
+          When loading, fix the width of button
         </Divider>
 
         <Grid.Row gutter={[24, 12]}>
@@ -276,7 +230,7 @@ export const LoadingButtons: Story = {
               loading={fixedWidthLoading}
               onClick={onClickFixedWith}
             >
-              <FormattedMessage id="button-click-me" />
+              Click Me
             </Button>
           </Grid.Col>
         </Grid.Row>
@@ -290,43 +244,29 @@ export const ButtonGroups: Story = {
     <Space size="large" direction="vertical">
       <Space size="large">
         <Button.Group>
-          <Button {...args}>
-            <FormattedMessage id="button-publish" />
-          </Button>
+          <Button {...args}>Publish</Button>
           <Button icon={<IconDown />} />
         </Button.Group>
         <Button.Group>
           <Button {...args} type="default">
-            <FormattedMessage id="button-publish" />
+            Publish
           </Button>
           <Button {...args} type="default" icon={<IconMore />} />
         </Button.Group>
       </Space>
       <Button.Group>
         <Button {...args} type="primary">
-          <FormattedMessage id="button-publish" />
+          Publish
         </Button>
         <Button {...args} type="primary" icon={<IconDown />} />
       </Button.Group>
       <Space size="large">
         <Button.Group>
-          <Button
-            {...args}
-            type="primary"
-            icon={<IconLeft />}
-            shape="round"
-            style={{ padding: '0 8px' }}
-          >
-            <FormattedMessage id="button-prev" />
+          <Button {...args} type="primary" icon={<IconLeft />} shape="round">
+            Previous
           </Button>
-          <Button
-            {...args}
-            type="primary"
-            shape="round"
-            style={{ padding: '0 8px' }}
-          >
-            <FormattedMessage id="button-next" />
-
+          <Button {...args} type="primary" shape="round">
+            Next
             <IconRight />
           </Button>
         </Button.Group>
@@ -337,10 +277,10 @@ export const ButtonGroups: Story = {
         </Button.Group>
         <Button.Group>
           <Button {...args} type="primary" icon={<IconStar />}>
-            <FormattedMessage id="button-favorite" />
+            Like
           </Button>
           <Button {...args} type="primary" icon={<IconSettings />}>
-            <FormattedMessage id="button-setting" />
+            Setting
           </Button>
         </Button.Group>
       </Space>
@@ -349,6 +289,9 @@ export const ButtonGroups: Story = {
 };
 
 export const LongButtons: Story = {
+  args: {
+    children: 'Long Button',
+  },
   render: (args) => (
     <Space
       style={{
@@ -360,21 +303,11 @@ export const LongButtons: Story = {
       direction="vertical"
       size="large"
     >
-      <Button {...args} type="primary" long>
-        <FormattedMessage id="primary" />
-      </Button>
-      <Button {...args} type="default" long>
-        <FormattedMessage id="default" />
-      </Button>
-      <Button {...args} type="dashed" long>
-        <FormattedMessage id="dashed" />
-      </Button>
-      <Button {...args} type="outline" long>
-        <FormattedMessage id="outline" />
-      </Button>
-      <Button {...args} type="text" long>
-        <FormattedMessage id="text" />
-      </Button>
+      <Button {...args} type="primary" long />
+      <Button {...args} type="default" long />
+      <Button {...args} type="dashed" long />
+      <Button {...args} type="outline" long />
+      <Button {...args} type="text" long />
     </Space>
   ),
 };

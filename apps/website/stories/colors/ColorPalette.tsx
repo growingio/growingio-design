@@ -32,7 +32,7 @@ export default function () {
       defaultMessage: '金色',
     }),
     skyblue: formatMessage({
-      id: 'color- skyblue',
+      id: 'color-skyblue',
       defaultMessage: '天空蓝',
     }),
     purple: formatMessage({

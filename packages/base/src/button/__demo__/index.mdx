@@ -1,96 +1,18 @@
-import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
-import { FormattedMessage } from 'react-intl';
+import { Meta, Markdown, Source } from '@storybook/blocks';
 import { getI18nDoc } from 'website/.storybook/preview';
 import * as ButtonStories from './index.stories';
+import DocPage from './DocPage';
 import zhCN from './props/zh-CN.md?raw';
 import enUS from './props/en-US.md?raw';
 
 <Meta of={ButtonStories} />
 
-<Title>
-  <FormattedMessage id="button-docs-title" />
-</Title>
-<p>
-  <FormattedMessage id="button-docs-desc" />
-</p>
+<DocPage />
 
-<Source code={`import { Button } from "growingio-design";`} language="tsx" />
-
-## Stories
-
-<h3 id="basic-buttons">
-  <FormattedMessage id="button-docs-basic-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-basic-desc" />
-</p>
-<Canvas of={ButtonStories.BasicButtons} />
-
-<h3 id="icon-buttons">
-  <FormattedMessage id="button-docs-icon-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-icon-desc" />
-</p>
-<Canvas of={ButtonStories.IconButtons} />
-
-<h3 id="button-shapes">
-  <FormattedMessage id="button-docs-shape-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-shape-desc" />
-</p>
-<Canvas of={ButtonStories.ButtonShapes} />
-
-<h3 id="button-sizes">
-  <FormattedMessage id="button-docs-size-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-size-desc" />
-</p>
-<Canvas of={ButtonStories.ButtonSizes} />
-
-<h3 id="button-status">
-  <FormattedMessage id="button-docs-status-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-status-desc" />
-</p>
-<Canvas of={ButtonStories.ButtonStatus} />
-
-<h3 id="disabled">
-  <FormattedMessage id="button-docs-disabled-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-disabled-desc" />
-</p>
-<Canvas of={ButtonStories.DisabledButtons} />
-
-<h3 id="loading-buttons">
-  <FormattedMessage id="button-docs-loading-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-loading-desc" />
-</p>
-<Canvas of={ButtonStories.LoadingButtons} />
-
-<h3 id="button-groups">
-  <FormattedMessage id="button-docs-group-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-group-desc" />
-</p>
-<Canvas of={ButtonStories.ButtonGroups} />
-
-<h3 id="long-buttons">
-  <FormattedMessage id="button-docs-long-title" />
-</h3>
-<p>
-  <FormattedMessage id="button-docs-long-desc" />
-</p>
-<Canvas of={ButtonStories.LongButtons} />
-
-## Props
+<Source
+  code={`import { Button, type ButtonProps } from "growingio-design";`}
+  language="tsx"
+/>
 
 <Markdown>
   {getI18nDoc({

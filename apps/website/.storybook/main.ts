@@ -13,10 +13,13 @@ const config: StorybookConfig = {
     options: {},
   },
   async viteFinal(config) {
-    return {
-      ...config,
-      resolve: { dedupe: ['@storybook/blocks', '@storybook/react'] },
-    };
+    if (process.env.NODE_ENV === 'production') {
+      return {
+        ...config,
+        resolve: { dedupe: ['@storybook/blocks', '@storybook/react'] },
+      };
+    }
+    return config;
   },
 };
 export default config;
