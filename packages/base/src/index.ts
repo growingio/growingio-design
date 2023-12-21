@@ -55,3 +55,6 @@ export type { DropdownProps } from '@arco-design/web-react/es/Dropdown';
 
 export { default as InputNumber } from '@arco-design/web-react/es/InputNumber';
 export type { InputNumberProps } from '@arco-design/web-react/es/InputNumber';
+
+export { default as Table } from '@arco-design/web-react/es/Table';
+export type { TableProps } from '@arco-design/web-react/es/Table';
