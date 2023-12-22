@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/react';
 import * as React from 'react';
 import { themes } from '@storybook/theming';
 import { DocsContainer } from '@storybook/blocks';
-import { IntlProvider, useIntl } from 'react-intl';
+import { IntlProvider, injectIntl, useIntl } from 'react-intl';
 import { ConfigProvider } from '@arco-design/web-react';
 import zhCN from '@arco-design/web-react/es/locale/zh-CN';
 import enUS from '@arco-design/web-react/es/locale/en-US';
@@ -47,6 +47,7 @@ const withConfigProvider = (Story, context) => {
     globals: { locale, direction },
   } = context;
 
+  const StoryWithIntl = injectIntl(Story);
   return (
     <IntlProvider
       defaultLocale={defaultLocale}
@@ -57,7 +58,7 @@ const withConfigProvider = (Story, context) => {
         locale={getComponentLocale(locale)}
         rtl={direction === 'rtl'}
       >
-        <Story />
+        <StoryWithIntl />
       </ConfigProvider>
     </IntlProvider>
   );

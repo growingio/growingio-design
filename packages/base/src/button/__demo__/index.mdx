@@ -1,22 +1,7 @@
-import { Meta, Markdown, Source } from '@storybook/blocks';
-import { getI18nDoc } from 'website/.storybook/preview';
+import { Meta } from '@storybook/blocks';
 import * as ButtonStories from './index.stories';
 import DocPage from './DocPage';
-import zhCN from './props/zh-CN.md?raw';
-import enUS from './props/en-US.md?raw';
 
 <Meta of={ButtonStories} />
 
 <DocPage />
-
-<Source
-  code={`import { Button, type ButtonProps } from "growingio-design";`}
-  language="tsx"
-/>
-
-<Markdown>
-  {getI18nDoc({
-    'en-US': enUS,
-    'zh-CN': zhCN,
-  })}
-</Markdown>

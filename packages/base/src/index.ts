@@ -57,4 +57,9 @@ export { default as InputNumber } from '@arco-design/web-react/es/InputNumber';
 export type { InputNumberProps } from '@arco-design/web-react/es/InputNumber';
 
 export { default as Table } from '@arco-design/web-react/es/Table';
-export type { TableProps } from '@arco-design/web-react/es/Table';
+export type {
+  TableProps,
+  RowSelectionProps as TableRowSelectionProps,
+  ColumnProps as TableColumnProps,
+  ExpandProps as TableExpandProps,
+} from '@arco-design/web-react/es/Table';

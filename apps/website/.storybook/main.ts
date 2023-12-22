@@ -12,6 +12,9 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
+  typescript: {
+    reactDocgen: 'react-docgen',
+  },
   async viteFinal(config) {
     if (process.env.NODE_ENV === 'production') {
       return {

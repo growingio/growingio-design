@@ -1,65 +1,7 @@
-import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
-import { FormattedMessage } from 'react-intl';
-import { getI18nDoc } from 'website/.storybook/preview';
+import { Meta } from '@storybook/blocks';
 import * as EmptyStories from './index.stories';
-import zhCN from './props/zh-CN.md?raw';
-import enUS from './props/en-US.md?raw';
+import DocPage from './DocPage';
 
 <Meta of={EmptyStories} />
 
-<Title>
-  <FormattedMessage id="empty-docs-title" />
-</Title>
-<p>
-  <FormattedMessage id="empty-docs-desc" />
-</p>
-
-<Source code={`import { Empty } from "growingio-design";`} language="tsx" />
-
-## Stories
-
-<h3 id="basic">
-  <FormattedMessage id="empty-docs-basic-title" />
-</h3>
-<p>
-  <FormattedMessage id="empty-docs-basic-desc" />
-</p>
-<Canvas of={EmptyStories.Basic} />
-
-<h3 id="icon-desc">
-  <FormattedMessage id="empty-docs-icon-desc-title" />
-</h3>
-<p>
-  <FormattedMessage id="empty-docs-icon-desc-desc" />
-</p>
-<Canvas of={EmptyStories.IconDesc} />
-
-<h3 id="image">
-  <FormattedMessage id="empty-docs-image-title" />
-</h3>
-<p>
-  <FormattedMessage id="empty-docs-image-desc" />
-</p>
-<Canvas of={EmptyStories.Image} />
-
-<h3 id="sizes">
-  <FormattedMessage id="empty-docs-sizes-title" />
-</h3>
-<p>
-  <FormattedMessage id="empty-docs-sizes-desc" />
-</p>
-<Canvas of={EmptyStories.Sizes} />
-
-<h3 id="styles">
-  <FormattedMessage id="empty-docs-styles-title" />
-</h3>
-<Canvas of={EmptyStories.Styles} />
-
-## Props
-
-<Markdown>
-  {getI18nDoc({
-    'en-US': enUS,
-    'zh-CN': zhCN,
-  })}
-</Markdown>
+<DocPage />
