@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "storybook": "nx storybook website",
-    "build-storybook": "nx build-storybook website"
+    "build-storybook": "nx build-storybook website",
+    "formatjs-extract": "formatjs extract '{apps,packages}/*/{stories,src}/**/*.ts*' --ignore '**/*.d.ts' --out-file apps/website/locales/zh-CN.json --format apps/website/locales/formatter.js"
   },
   "author": "",
   "license": "ISC",
