@@ -127,7 +127,7 @@ function DocPage({ intl }: { intl: IntlShape }) {
       </Title>
 
       <Title heading={3} id="basic-buttons">
-        <FormattedMessage defaultMessage="基本用法" />
+        <FormattedMessage defaultMessage="基础用法" />
       </Title>
       <Paragraph>
         <FormattedMessage defaultMessage="按钮分为主要按钮、默认按钮、虚线按钮、线形按钮和文本按钮五种。" />
