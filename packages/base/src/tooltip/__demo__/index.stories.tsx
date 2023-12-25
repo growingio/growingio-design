@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Typography } from '@arco-design/web-react';
-import { Button, Link, Space } from '../..';
-import Tooltip from '..';
+import { Tooltip, Button, Link, Space } from '../..';
 
 const meta: Meta<typeof Tooltip> = {
   component: Tooltip,
@@ -17,17 +16,19 @@ export const Basic: Story = {
   args: {
     children: (
       <Typography.Text>
-        <FormattedMessage id="tooltip-basic-child" />
+        <FormattedMessage defaultMessage="鼠标移到上面显示文字气泡" />
       </Typography.Text>
     ),
-    content: <FormattedMessage id="tooltip-basic-content" />,
+    content: <FormattedMessage defaultMessage="这是文字气泡内容" />,
   },
   render: (args) => (
     <Space size="large">
       <Tooltip {...args} />
       <Tooltip
         {...args}
-        content={<FormattedMessage id="tooltip-basic-multipe-lines" />}
+        content={
+          <FormattedMessage defaultMessage="这是两行的文字气泡内容。这是两行的文字气泡内容。这是两行的文字气泡内容。" />
+        }
       />
     </Space>
   ),
