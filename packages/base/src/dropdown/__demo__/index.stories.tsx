@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { ReactElement, ReactNode, useState, useRef } from 'react';
-import { FormattedMessage } from 'react-intl';
-import Dropdown from '..';
-import { Button, Divider, Menu, Space, Tooltip } from '../..';
+import { Dropdown, Button, Divider, Menu, Space, Tooltip } from '../..';
 import { IconDown } from '@arco-iconbox/react-growingio';
 import { DropdownPositionType } from '../../_core/types';
 
@@ -24,13 +22,13 @@ const droplist = <Menu>{...menuItems}</Menu>;
 
 const hoverableChild = (
   <Button type="text">
-    <FormattedMessage id="hover" /> <IconDown />
+    Hover <IconDown />
   </Button>
 );
 
 const clickableChild = (
   <Button type="text">
-    <FormattedMessage id="click" /> <IconDown />
+    Click <IconDown />
   </Button>
 );
 
@@ -48,45 +46,48 @@ export const Basic: Story = {
   ),
 };
 
-const postions: { name: ReactNode; position: DropdownPositionType }[] = [
-  {
-    name: <FormattedMessage id="dropdown-position-tl" />,
-    position: 'tl',
-  },
-  {
-    name: <FormattedMessage id="dropdown-position-top" />,
-    position: 'top',
-  },
-  {
-    name: <FormattedMessage id="dropdown-position-tr" />,
-    position: 'tr',
-  },
-  {
-    name: <FormattedMessage id="dropdown-position-bl" />,
-    position: 'bl',
-  },
-  {
-    name: <FormattedMessage id="dropdown-position-bottom" />,
-    position: 'bottom',
-  },
-  {
-    name: <FormattedMessage id="dropdown-position-br" />,
-    position: 'br',
-  },
-];
 export const Position: Story = {
   args: {
     droplist,
   },
-  render: (args) => (
-    <Space wrap style={{ padding: '150px 0' }}>
-      {postions.map(({ name, position }) => (
-        <Dropdown {...args} key={position} position={position}>
-          <Button>{name}</Button>
-        </Dropdown>
-      ))}
-    </Space>
-  ),
+  render: (args, { intl: { formatMessage } }) => {
+    const postions: { name: ReactNode; position: DropdownPositionType }[] = [
+      {
+        name: formatMessage({ defaultMessage: '左上' }),
+        position: 'tl',
+      },
+      {
+        name: formatMessage({ defaultMessage: '正上' }),
+        position: 'top',
+      },
+      {
+        name: formatMessage({ defaultMessage: '右上' }),
+        position: 'tr',
+      },
+      {
+        name: formatMessage({ defaultMessage: '左下' }),
+        position: 'bl',
+      },
+      {
+        name: formatMessage({ defaultMessage: '正下' }),
+        position: 'bottom',
+      },
+      {
+        name: formatMessage({ defaultMessage: '右下' }),
+        position: 'br',
+      },
+    ];
+
+    return (
+      <Space wrap style={{ padding: '150px 0' }}>
+        {postions.map(({ name, position }) => (
+          <Dropdown {...args} key={position} position={position}>
+            <Button>{name}</Button>
+          </Dropdown>
+        ))}
+      </Space>
+    );
+  },
 };
 
 export const Extra: Story = {
@@ -126,16 +127,16 @@ export const DropdownButton: DropdownButtonStory = {
   args: {
     droplist,
   },
-  render: (args) => (
+  render: (args, { intl: { formatMessage } }) => (
     <Space size="large">
       <Dropdown.Button type="secondary" {...args}>
-        <FormattedMessage id="button-publish" />
+        {formatMessage({ defaultMessage: '发布' })}
       </Dropdown.Button>
       <Dropdown.Button type="secondary" {...args} disabled>
-        <FormattedMessage id="button-docs-disabled-title" />
+        {formatMessage({ defaultMessage: '禁用' })}
       </Dropdown.Button>
       <Dropdown.Button type="primary" {...args} icon={<IconDown />}>
-        <FormattedMessage id="dropdown-button-with-icon" />
+        {formatMessage({ defaultMessage: '自定义图标' })}
       </Dropdown.Button>
       <Dropdown.Button
         type="primary"
@@ -147,7 +148,7 @@ export const DropdownButton: DropdownButtonStory = {
           }),
         ]}
       >
-        <FormattedMessage id="dropdown-button-with-tooltip" />
+        {formatMessage({ defaultMessage: '自定义文字气泡' })}
       </Dropdown.Button>
     </Space>
   ),
@@ -200,7 +201,7 @@ export const RightClickMenu: Story = {
     trigger: 'contextMenu',
     droplist,
   },
-  render: (args) => (
+  render: (args, { intl: { formatMessage } }) => (
     <Dropdown {...args}>
       <div
         style={{
@@ -213,9 +214,7 @@ export const RightClickMenu: Story = {
           justifyContent: 'center',
         }}
       >
-        <span>
-          <FormattedMessage id="right-click" />
-        </span>
+        <span>{formatMessage({ defaultMessage: '右击' })}</span>
       </div>
     </Dropdown>
   ),
@@ -226,7 +225,7 @@ export const ControlledVisible: Story = {
     children: clickableChild,
     trigger: 'click',
   },
-  render: (args) => {
+  render: (args, { intl: { formatMessage } }) => {
     const [visible, setVisible] = useState(false);
     const refMenuItemClicked = useRef(null);
 
@@ -240,10 +239,14 @@ export const ControlledVisible: Story = {
             }}
           >
             <Menu.Item key="not-closed">
-              <FormattedMessage id="dropdown-controlled-visible-not-closed" />
+              {formatMessage({
+                defaultMessage: '点击此项不会关闭下拉菜单',
+              })}
             </Menu.Item>
             <Menu.Item key="closed">
-              <FormattedMessage id="dropdown-controlled-visible-closed" />
+              {formatMessage({
+                defaultMessage: '点击此项关闭下拉菜单',
+              })}
             </Menu.Item>
           </Menu>
         }

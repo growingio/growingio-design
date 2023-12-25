@@ -11,8 +11,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@arco-design/web-react": "^2.56.0",
+  "dependencies": {
+    "@arco-design/web-react": "2.57.2",
     "@arco-iconbox/react-growingio": "0.0.4",
     "@arco-themes/react-growingio": "0.0.5",
     "@storybook/addon-docs": "7.6.5",
