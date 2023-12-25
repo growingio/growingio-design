@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
-import InputNumber from '..';
-import { Space, Radio } from '../..';
+import { InputNumber, Space, Radio } from '../..';
 import { SizeType } from '../../_core/types';
 
 const meta: Meta<typeof InputNumber> = {
@@ -18,18 +16,15 @@ export const Basic: Story = {
     defaultValue: 500,
     style: { width: 160 },
   },
-  render: (args) => {
-    const intl = useIntl();
-    return (
-      <Space size="large">
-        <InputNumber
-          {...args}
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
-        />
-        <InputNumber {...args} disabled />
-      </Space>
-    );
-  },
+  render: (args, { intl: { formatMessage } }) => (
+    <Space size="large">
+      <InputNumber
+        {...args}
+        placeholder={formatMessage({ defaultMessage: '请输入' })}
+      />
+      <InputNumber {...args} disabled />
+    </Space>
+  ),
 };
 
 export const Button: Story = {
@@ -44,24 +39,23 @@ export const Size: Story = {
   args: {
     ...Basic.args,
   },
-  render: (args) => {
-    const intl = useIntl();
+  render: (args, { intl: { formatMessage } }) => {
     const [size, setSize] = useState<SizeType>('default');
     const sizeOptions = [
       {
-        name: intl.formatMessage({ id: 'mini' }),
+        name: formatMessage({ defaultMessage: '迷你' }),
         value: 'mini',
       },
       {
-        name: intl.formatMessage({ id: 'small' }),
+        name: formatMessage({ defaultMessage: '小' }),
         value: 'small',
       },
       {
-        name: intl.formatMessage({ id: 'medium' }),
+        name: formatMessage({ defaultMessage: '中' }),
         value: 'default',
       },
       {
-        name: intl.formatMessage({ id: 'large' }),
+        name: formatMessage({ defaultMessage: '大' }),
         value: 'large',
       },
     ];
@@ -86,13 +80,13 @@ export const Size: Story = {
           <InputNumber
             {...args}
             size={size}
-            placeholder={intl.formatMessage({ id: 'please-enter' })}
+            placeholder={formatMessage({ defaultMessage: '请输入' })}
           />
           <InputNumber
             {...args}
             size={size}
             mode="button"
-            placeholder={intl.formatMessage({ id: 'please-enter' })}
+            placeholder={formatMessage({ defaultMessage: '请输入' })}
           />
         </Space>
       </Space>
@@ -109,12 +103,11 @@ export const PrecisionAndStep: Story = {
     step: 0.1,
     precision: 1,
   },
-  render: (args) => {
-    const intl = useIntl();
+  render: (args, { intl: { formatMessage } }) => {
     return (
       <InputNumber
         {...args}
-        placeholder={intl.formatMessage({ id: 'please-enter' })}
+        placeholder={formatMessage({ defaultMessage: '请输入' })}
       />
     );
   },
@@ -126,30 +119,30 @@ export const Formatter: Story = {
     min: 0,
     max: 100_000_000,
     step: 1_000,
-    prefix: <FormattedMessage id="input-currency-unit" />,
     parser: (value) => value.replace(/,/g, ''),
   },
-  render: (args) => {
-    const intl = useIntl();
+  render: (args, { intl: { formatMessage } }) => {
     const [value, setValue] = useState(12000);
     const [delayValue, setDelayValue] = useState(12000);
     return (
       <Space size="large">
         <InputNumber
           {...args}
+          prefix={formatMessage({ defaultMessage: 'CNY' })}
           value={value}
           onChange={setValue}
           formatter={(value) => `${value}`.replace(/B(?=(d{3})+(?!d))/g, ',')}
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
+          placeholder={formatMessage({ defaultMessage: '请输入' })}
         />
         <InputNumber
           {...args}
+          prefix={formatMessage({ defaultMessage: 'CNY' })}
           value={delayValue}
           onChange={setDelayValue}
           formatter={(value, { userTyping, input }) =>
             userTyping ? input : `${value}`.replace(/B(?=(d{3})+(?!d))/g, ',')
           }
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
+          placeholder={formatMessage({ defaultMessage: '请输入' })}
         />
       </Space>
     );
@@ -161,35 +154,32 @@ export const PrefixAndSuffix: Story = {
     ...Basic.args,
     min: 0,
   },
-  render: (args) => {
-    const intl = useIntl();
-    return (
-      <Space wrap size="large">
-        <InputNumber
-          {...args}
-          prefix={<FormattedMessage id="input-currency-unit" />}
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
-        />
-        <InputNumber
-          {...args}
-          suffix={<FormattedMessage id="input-currency-unit" />}
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
-        />
-        <InputNumber
-          {...args}
-          mode="button"
-          prefix={<FormattedMessage id="input-currency-unit" />}
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
-        />
-        <InputNumber
-          {...args}
-          mode="button"
-          suffix={<FormattedMessage id="input-currency-unit" />}
-          placeholder={intl.formatMessage({ id: 'please-enter' })}
-        />
-      </Space>
-    );
-  },
+  render: (args, { intl: { formatMessage } }) => (
+    <Space wrap size="large">
+      <InputNumber
+        {...args}
+        prefix={formatMessage({ defaultMessage: 'CNY' })}
+        placeholder={formatMessage({ defaultMessage: '请输入' })}
+      />
+      <InputNumber
+        {...args}
+        suffix={formatMessage({ defaultMessage: 'CNY' })}
+        placeholder={formatMessage({ defaultMessage: '请输入' })}
+      />
+      <InputNumber
+        {...args}
+        mode="button"
+        prefix={formatMessage({ defaultMessage: 'CNY' })}
+        placeholder={formatMessage({ defaultMessage: '请输入' })}
+      />
+      <InputNumber
+        {...args}
+        mode="button"
+        suffix={formatMessage({ defaultMessage: 'CNY' })}
+        placeholder={formatMessage({ defaultMessage: '请输入' })}
+      />
+    </Space>
+  ),
 };
 
 export const StrictMode: Story = {

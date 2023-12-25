@@ -153,16 +153,6 @@ function DocPage({ intl }: { intl: IntlShape }) {
       type: 'ButtonProps',
     },
     {
-      name: 'className',
-      description: formatMessage({ defaultMessage: '节点类名。' }),
-      type: 'string | string[]',
-    },
-    {
-      name: 'style',
-      description: formatMessage({ defaultMessage: '节点样式。' }),
-      type: 'CSSProperties',
-    },
-    {
       name: 'triggerProps',
       description: formatMessage({
         defaultMessage: '弹出框下可接受所有 `Trigger` 组件的 `Props`。',
