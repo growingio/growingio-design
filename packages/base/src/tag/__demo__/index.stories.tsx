@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import {
   IconCheckCircleFill,
   IconPlus,
@@ -12,17 +11,17 @@ import {
   IconAppleFill,
 } from '@arco-iconbox/react-growingio';
 import {
+  Tag,
+  BadgeTag,
+  AvatarTag,
   Divider,
   Input,
   Message,
   Switch,
   Typography,
   Grid,
-} from '@arco-design/web-react';
-import Space from '../../space';
-import Tag from '..';
-import BadgeTag from '../BadgeTag';
-import AvatarTag from '../AvatarTag';
+  Space,
+} from '../..';
 import COLORS from '../../_core/colors';
 
 const { Row, Col } = Grid;
@@ -37,7 +36,7 @@ type Story = StoryObj<typeof Tag>;
 
 export const Basic: Story = {
   args: {
-    children: <FormattedMessage id="default" />,
+    children: 'Default',
   },
   render: (args) => (
     <Space size="large">
@@ -49,7 +48,7 @@ export const Basic: Story = {
 
 export const Close: Story = {
   args: {
-    children: <FormattedMessage id="tag" />,
+    children: 'Tag',
     closable: true,
   },
   render: (args) => {
@@ -72,9 +71,7 @@ export const Close: Story = {
         </Space>
         <Space size="small">
           <Switch size="small" checked={visible} onChange={onClose} />
-          <Typography.Text>
-            <FormattedMessage id="toggle" />
-          </Typography.Text>
+          <Typography.Text>Toggle</Typography.Text>
         </Space>
       </Space>
     );
@@ -99,9 +96,9 @@ export const Type: Story = {
   args: {
     ...Basic.args,
   },
-  render: (args) => (
-    <>
-      <Row gutter={[0, 36]} justify="center">
+  render: (args, { intl: { formatMessage } }) => (
+    <div style={{ width: 800 }}>
+      <Row gutter={[18, 36]} justify="center">
         <Col span={3}>Normal</Col>
         <Col span={3}>
           <Tag {...args} type="normal" status="not-started" />
@@ -122,7 +119,7 @@ export const Type: Story = {
           <Tag {...args} type="normal" status="done" />
         </Col>
       </Row>
-      <Row gutter={[0, 36]} justify="center">
+      <Row gutter={[18, 36]} justify="center">
         <Col span={3}>Highlighted</Col>
         <Col span={3}>
           <Tag {...args} type="highlighted" status="not-started" />
@@ -143,7 +140,7 @@ export const Type: Story = {
           <Tag {...args} type="highlighted" status="done" />
         </Col>
       </Row>
-      <Row gutter={[0, 36]} justify="center">
+      <Row gutter={[18, 36]} justify="center">
         <Col span={3}>Outline</Col>
         <Col span={3}>
           <Tag {...args} type="outline" status="not-started" />
@@ -164,7 +161,7 @@ export const Type: Story = {
           <Tag {...args} type="outline" status="done" />
         </Col>
       </Row>
-      <Row gutter={[0, 36]} justify="center">
+      <Row gutter={[18, 36]} justify="center">
         <Col span={3}>Light outline</Col>
         <Col span={3}>
           <Tag {...args} type="light-outline" status="not-started" />
@@ -185,39 +182,39 @@ export const Type: Story = {
           <Tag {...args} type="light-outline" status="done" />
         </Col>
       </Row>
-      <Row gutter={[0, 36]} justify="center">
+      <Row gutter={[18, 36]} justify="center">
         <Col span={3} offset={3}>
           <Typography.Text bold>
-            <FormattedMessage id="tag-status-not-started" />
+            {formatMessage({ defaultMessage: '未开始/草稿' })}
           </Typography.Text>
         </Col>
         <Col span={4}>
           <Typography.Text bold>
-            <FormattedMessage id="tag-status-success" />
+            {formatMessage({ defaultMessage: '成功/已完成/启用中' })}
           </Typography.Text>
         </Col>
         <Col span={3}>
           <Typography.Text bold>
-            <FormattedMessage id="tag-status-warning" />
+            {formatMessage({ defaultMessage: '等待/提醒' })}
           </Typography.Text>
         </Col>
         <Col span={4}>
           <Typography.Text bold>
-            <FormattedMessage id="tag-status-danger" />
+            {formatMessage({ defaultMessage: '失败/锁定/警告' })}
           </Typography.Text>
         </Col>
         <Col span={3}>
           <Typography.Text bold>
-            <FormattedMessage id="tag-status-doing" />
+            {formatMessage({ defaultMessage: '进行中' })}
           </Typography.Text>
         </Col>
         <Col span={3}>
           <Typography.Text bold>
-            <FormattedMessage id="tag-status-done" />
+            {formatMessage({ defaultMessage: '已结束/已关闭' })}
           </Typography.Text>
         </Col>
       </Row>
-    </>
+    </div>
   ),
 };
 
@@ -233,7 +230,7 @@ export const Color: Story = {
   args: {
     closable: true,
   },
-  render: (args) => {
+  render: (args, { intl: { formatMessage } }) => {
     const CUSTOM_COLORS = [
       '#f53f3f',
       '#7816ff',
@@ -259,9 +256,7 @@ export const Color: Story = {
             </Tag>
           ))}
         </Space>
-        <Divider>
-          <FormattedMessage id="tag-color-custom" />
-        </Divider>
+        <Divider>{formatMessage({ defaultMessage: '自定义颜色' })}</Divider>
         <Space wrap>
           {CUSTOM_COLORS.map((color) => (
             <Tag {...args} key={color} color={color}>
@@ -276,7 +271,7 @@ export const Color: Story = {
 
 export const Active: Story = {
   args: {},
-  render: (args) => {
+  render: (args, { intl: { formatMessage } }) => {
     const [tags, setTags] = React.useState(['Tag 1', 'Tag 2', 'Tag 3']);
     const [showInput, setShowInput] = React.useState(false);
     const [inputValue, setInputValue] = React.useState('');
@@ -337,7 +332,7 @@ export const Active: Story = {
               }
             }}
           >
-            <FormattedMessage id="tag-active-add-tag" />
+            {formatMessage({ defaultMessage: '添加标签' })}
           </Tag>
         )}
       </Space>
@@ -349,19 +344,19 @@ export const Size: Story = {
   args: {
     closable: true,
   },
-  render: (args) => (
+  render: (args, { intl: { formatMessage } }) => (
     <Space size="large" align="start">
       <Tag {...args} size="large">
-        <FormattedMessage id="large" />
+        {formatMessage({ defaultMessage: '大' })}
       </Tag>
       <Tag {...args} size="default">
-        <FormattedMessage id="medium" />
+        {formatMessage({ defaultMessage: '中' })}
       </Tag>
       <Tag {...args} size="small">
-        <FormattedMessage id="small" />
+        {formatMessage({ defaultMessage: '小' })}
       </Tag>
       <Tag {...args} size="mini">
-        <FormattedMessage id="mini" />
+        {formatMessage({ defaultMessage: '迷你' })}
       </Tag>
     </Space>
   ),
@@ -369,7 +364,7 @@ export const Size: Story = {
 
 export const CloseAsync: Story = {
   args: {},
-  render: (args) => (
+  render: (args, { intl: { formatMessage } }) => (
     <Tag
       {...args}
       closable
@@ -380,7 +375,7 @@ export const CloseAsync: Story = {
               resolve(0);
             } else {
               Message.error({
-                content: <FormattedMessage id="tag-close-failure" />,
+                content: formatMessage({ defaultMessage: '关闭失败' }),
               });
               reject();
             }
@@ -388,7 +383,7 @@ export const CloseAsync: Story = {
         });
       }}
     >
-      <FormattedMessage id="tag" />
+      Tag
     </Tag>
   ),
 };
@@ -415,13 +410,12 @@ export const Icon: Story = {
 
 export const Bordered: Story = {
   args: {
+    ...Basic.args,
     bordered: true,
   },
   render: (args) => (
     <Space wrap>
-      <Tag {...args}>
-        <FormattedMessage id="default" />
-      </Tag>
+      <Tag {...args} />
       {COLORS.map((color) => (
         <Tag {...args} key={color} color={color}>
           {color}
@@ -436,8 +430,8 @@ type BadgeTagStory = StoryObj<typeof BadgeTag>;
 export const BadgeTagBasic: BadgeTagStory = {
   name: 'Badge Tag',
   args: {
-    title: <FormattedMessage id="tag-badge-title" />,
-    content: <FormattedMessage id="tag-badge-content" />,
+    title: 'Title',
+    content: 'Content',
   },
   render: (args) => (
     <Grid.Row gutter={[0, 24]}>
@@ -472,7 +466,7 @@ export const BadgeTagBasic: BadgeTagStory = {
 
 export const BadgeTagColor: BadgeTagStory = {
   args: {
-    title: <FormattedMessage id="tag-badge-title" />,
+    title: 'Title',
   },
   render: (args) => (
     <Space wrap>
@@ -488,7 +482,7 @@ type AvatarTagStory = StoryObj<typeof AvatarTag>;
 export const AvatarTagBasic: AvatarTagStory = {
   args: {
     imageSrc: '/demos/avatar.png',
-    label: <FormattedMessage id="tag" />,
+    label: 'Tag',
   },
   name: 'Avatar Tag',
   render: (args) => (

@@ -63,3 +63,12 @@ export type {
   ColumnProps as TableColumnProps,
   ExpandProps as TableExpandProps,
 } from '@arco-design/web-react/es/Table';
+
+export { default as Message } from '@arco-design/web-react/es/Message';
+export type { MessageProps } from '@arco-design/web-react/es/Message';
+
+export { default as Switch } from '@arco-design/web-react/es/Switch';
+export type { SwitchProps } from '@arco-design/web-react/es/Switch';
+
+export { default as Grid } from '@arco-design/web-react/es/Grid';
+export type { GridProps } from '@arco-design/web-react/es/Grid';
