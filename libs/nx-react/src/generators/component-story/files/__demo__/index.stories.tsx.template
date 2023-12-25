@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import <%= className %> from '..';
+import { <%= className %> } from '../..';
 
 const meta: Meta<typeof <%= className %>> = {
   component: <%= className %>,
@@ -13,5 +12,5 @@ type Story = StoryObj<typeof <%= className %>>;
 
 export const Basic: Story = {
   args: {},
-  render: (args) => (<<%= className %> {...args} />)
+  render: (args, { intl: { formatMessage } }) => (<<%= className %> {...args} />)
 };

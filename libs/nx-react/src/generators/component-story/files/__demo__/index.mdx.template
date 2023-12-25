@@ -1,37 +1,7 @@
-import { Canvas, Meta, Title, Markdown, Source } from '@storybook/blocks';
-import { FormattedMessage } from 'react-intl';
-import { getI18nDoc } from 'website/.storybook/preview';
+import { Meta } from '@storybook/blocks';
 import * as <%= className %>Stories from './index.stories';
-import zhCN from './props/zh-CN.md?raw';
-import enUS from './props/en-US.md?raw';
+import DocPage from './DocPage';
 
 <Meta of={<%= className %>Stories} />
 
-
-<Title>
-  <FormattedMessage id='<%= name %>-docs-title' />
-</Title>
-<p>
-  <FormattedMessage id='<%= name %>-docs-desc' />
-</p>
-
-<Source code={`import { <%= className %> } from 'growingio-design';`} language='tsx' />
-
-## Stories
-
-<h3 id='basic'>
-  <FormattedMessage id='<%= name %>-docs-basic-title' />
-</h3>
-<p>
-  <FormattedMessage id='<%= name %>-docs-basic-desc' />
-</p>
-<Canvas of={<%= className %>Stories.Basic} />
-
-## Props
-
-<Markdown>
-  {getI18nDoc({
-    'en-US': enUS,
-    'zh-CN': zhCN,
-  })}
-</Markdown>
+<DocPage />

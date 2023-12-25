@@ -25,16 +25,13 @@ describe('component-story generator', () => {
     await componentStoryGenerator(tree, options);
 
     expect(
-      tree.exists(`${sourceRoot}/component/__demo__/index.mdx`)
+      tree.exists(`${sourceRoot}/component/__demo__/index.mdx`),
     ).toBeTruthy();
     expect(
-      tree.exists(`${sourceRoot}/component/__demo__/index.stories.tsx`)
+      tree.exists(`${sourceRoot}/component/__demo__/DocPage.tsx`),
     ).toBeTruthy();
     expect(
-      tree.exists(`${sourceRoot}/component/__demo__/props/en-US.md`)
-    ).toBeTruthy();
-    expect(
-      tree.exists(`${sourceRoot}/component/__demo__/props/zh-CN.md`)
+      tree.exists(`${sourceRoot}/component/__demo__/index.stories.tsx`),
     ).toBeTruthy();
   });
 });
