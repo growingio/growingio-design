@@ -6,8 +6,8 @@ import { IntlProvider, injectIntl, useIntl } from 'react-intl';
 import { ConfigProvider } from '@arco-design/web-react';
 import zhCN from '@arco-design/web-react/es/locale/zh-CN';
 import enUS from '@arco-design/web-react/es/locale/en-US';
-import zhCNMessages from './lang/zh-CN.json';
-import enUSMessages from './lang/en-US.json';
+import zhCNMessages from '../locales/zh-CN.json';
+import enUSMessages from '../locales/en-US.json';
 
 import '../../../packages/base/src/index.css';
 
