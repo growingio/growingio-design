@@ -234,7 +234,7 @@
 
 .arco-tag-checked.arco-tag-gioorange {
   color: rgb(var(--gioorange-6));
-  background-color: rgb(var(--gioorange-2));
+  background-color: rgb(var(--gioorange-1));
   border: 1px solid #0000;
 }
 .arco-tag-checked.arco-tag-gioorange.arco-tag-bordered {
@@ -242,7 +242,7 @@
 }
 .arco-tag-checked.arco-tag-primary {
   color: rgb(var(--primary-6));
-  background-color: rgb(var(--primary-2));
+  background-color: rgb(var(--primary-1));
   border: 1px solid #0000;
 }
 .arco-tag-checked.arco-tag-primary.arco-tag-bordered {
