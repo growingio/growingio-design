@@ -81,3 +81,6 @@ export type { InputTagProps } from './input-tag';
 
 export { default as TimePicker } from './time-picker';
 export type { TimePickerProps, TimeRangePickerProps } from './time-picker';
+
+export { default as Avatar } from '@arco-design/web-react/es/Avatar';
+export type { AvatarProps } from '@arco-design/web-react/es/Avatar';
