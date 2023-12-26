@@ -72,3 +72,6 @@ export type { SwitchProps } from '@arco-design/web-react/es/Switch';
 
 export { default as Grid } from '@arco-design/web-react/es/Grid';
 export type { GridProps } from '@arco-design/web-react/es/Grid';
+
+export { default as InputTag } from './input-tag';
+export type { InputTagProps } from './input-tag';
