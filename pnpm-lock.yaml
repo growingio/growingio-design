@@ -93,8 +93,8 @@ importers:
         specifier: 0.0.4
         version: 0.0.4(react@18.2.0)
       '@arco-themes/react-growingio':
-        specifier: 0.0.5
-        version: 0.0.5(@arco-design/web-react@2.57.2)
+        specifier: 0.1.0
+        version: 0.1.0(@arco-design/web-react@2.57.2)
       '@storybook/addon-docs':
         specifier: 7.6.5
         version: 7.6.5(react-dom@18.2.0)(react@18.2.0)
@@ -143,6 +143,10 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
+    devDependencies:
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
 
   libs/nx-react:
     dependencies:
@@ -159,8 +163,8 @@ importers:
         specifier: 2.57.2
         version: 2.57.2(react-dom@18.2.0)(react@18.2.0)
       '@arco-themes/react-growingio':
-        specifier: 0.0.6
-        version: 0.0.6(@arco-design/web-react@2.57.2)
+        specifier: 0.1.0
+        version: 0.1.0(@arco-design/web-react@2.57.2)
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -174,6 +178,9 @@ importers:
       '@storybook/react':
         specifier: 7.6.6
         version: 7.6.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -241,18 +248,10 @@ packages:
     dependencies:
       react: 18.2.0
 
-  /@arco-themes/react-growingio@0.0.5(@arco-design/web-react@2.57.2):
-    resolution: {integrity: sha512-scJVt2gmYNaq2WG9OBm2RbxTG90C5TW0sRVuEjhhEioHdgLTvJVLgs/ruvJf9NlaB9Y7+mqYBBnuRd7z0ln9ag==}
+  /@arco-themes/react-growingio@0.1.0(@arco-design/web-react@2.57.2):
+    resolution: {integrity: sha512-X4SXGldzVLBGefMKMUkPND38mie4H+qLroAZfUD2mhSV8+MyGU96XHIpdZ1FdE12Di2YrEgyH/hSxxDy7YEJMw==}
     peerDependencies:
-      '@arco-design/web-react': ^2.56.0
-    dependencies:
-      '@arco-design/web-react': 2.57.2(react-dom@18.2.0)(react@18.2.0)
-    dev: false
-
-  /@arco-themes/react-growingio@0.0.6(@arco-design/web-react@2.57.2):
-    resolution: {integrity: sha512-7KeMfY5h3r2N6wqdZUCNhG4oa1Oc8QlNPQYRloOmWLDaUoJYZCNw1C5OEgi+vuPALmMIS+Wyqvxf2qbML1M+9A==}
-    peerDependencies:
-      '@arco-design/web-react': ^2.56.2
+      '@arco-design/web-react': ^2.57.2
     dependencies:
       '@arco-design/web-react': 2.57.2(react-dom@18.2.0)(react@18.2.0)
     dev: false
