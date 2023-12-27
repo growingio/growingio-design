@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { Markdown } from '@storybook/blocks';
 import { IntlShape, injectIntl } from 'react-intl';
 import { Table, type TableColumnProps, Typography } from 'growingio-design/src';
 
@@ -65,6 +66,7 @@ export function PropsTable({
     {
       title: formatMessage({ defaultMessage: '描述' }),
       dataIndex: 'description',
+      render: (col) => <Markdown>{col}</Markdown>,
     },
     {
       title: formatMessage({ defaultMessage: '类型' }),

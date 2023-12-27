@@ -1,6 +1,7 @@
 @import '../node_modules/@arco-themes/react-growingio/css/arco.css';
 @import './_core/tokens.css';
 @import './_core/reset.css';
+@import './_core/picker.css';
 @import './button/style/index.css';
 @import './dropdown/style/index.css';
 @import './empty/style/index.css';
@@ -10,3 +11,4 @@
 @import './input/style/index.css';
 @import './input-number/style/index.css';
 @import './input-tag/style/index.css';
+@import './time-picker/style/index.css';

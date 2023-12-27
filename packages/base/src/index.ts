@@ -1,5 +1,8 @@
 import './index.css';
 
+export { default as Alert } from '@arco-design/web-react/es/Alert';
+export type { AlertProps } from '@arco-design/web-react/es/Alert';
+
 export { default as Button } from './button';
 export type { ButtonProps } from './button';
 
@@ -75,3 +78,6 @@ export type { GridProps } from '@arco-design/web-react/es/Grid';
 
 export { default as InputTag } from './input-tag';
 export type { InputTagProps } from './input-tag';
+
+export { default as TimePicker } from './time-picker';
+export type { TimePickerProps, TimeRangePickerProps } from './time-picker';
