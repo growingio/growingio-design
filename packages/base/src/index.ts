@@ -84,3 +84,13 @@ export type { TimePickerProps, TimeRangePickerProps } from './time-picker';
 
 export { default as Avatar } from '@arco-design/web-react/es/Avatar';
 export type { AvatarProps } from '@arco-design/web-react/es/Avatar';
+
+export { default as DatePicker } from './date-picker';
+export type {
+  DatePickerProps,
+  WeekPickerProps,
+  MonthPickerProps,
+  QuarterPickerProps,
+  YearPickerProps,
+  DateRangePickerProps,
+} from './date-picker';
