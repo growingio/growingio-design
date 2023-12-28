@@ -144,6 +144,9 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
     devDependencies:
+      dayjs:
+        specifier: ^1.11.10
+        version: 1.11.10
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -178,6 +181,9 @@ importers:
       '@storybook/react':
         specifier: 7.6.6
         version: 7.6.6(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      dayjs:
+        specifier: ^1.11.10
+        version: 1.11.10
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -7490,7 +7496,6 @@ packages:
 
   /dayjs@1.11.10:
     resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
-    dev: false
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
