@@ -203,8 +203,8 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'InputTag' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'InputTag' })}</Paragraph>
+      <Title>{formatMessage({ defaultMessage: '标签输入框 InputTag' })}</Title>
+      <Paragraph>{formatMessage({ defaultMessage: '标签输入。' })}</Paragraph>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 

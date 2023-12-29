@@ -367,8 +367,13 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'Cascader' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'Cascader' })}</Paragraph>
+      <Title>{formatMessage({ defaultMessage: '级联选择 Cascader' })}</Title>
+      <Paragraph>
+        {formatMessage({
+          defaultMessage:
+            '指在选择器选项数量较多时，采用多级分类的方式将选项进行分隔。',
+        })}
+      </Paragraph>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 

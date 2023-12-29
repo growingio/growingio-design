@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconGallery, IconItem } from '@storybook/blocks';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import * as Icon from '@arco-iconbox/react-growingio';
 import { Radio } from 'growingio-design/src';
 import {
@@ -15,7 +15,7 @@ import {
   FILLED_ICONS,
 } from './Icons';
 
-const renderIcons = (icons: string[], messageId: string) => (
+const renderIcons = (icons: string[], title: string) => (
   <div
     style={{
       marginTop: 40,
@@ -32,7 +32,7 @@ const renderIcons = (icons: string[], messageId: string) => (
         backgroundColor: 'var(--color-bg-2)',
       }}
     >
-      <FormattedMessage id={messageId} values={{ count: icons.length }} />
+      {title}
     </div>
     <div style={{ padding: '12px 12px 0px 12px' }}>
       <IconGallery>
@@ -54,39 +54,112 @@ const renderIcons = (icons: string[], messageId: string) => (
 
 export default function () {
   const [iconType, setIconType] = React.useState('outlined');
+  const { formatMessage } = useIntl();
 
   const content = () => {
     if (iconType === 'filled') {
-      return <div>{renderIcons(FILLED_ICONS, 'icon-filled-all')}</div>;
+      return (
+        <div>
+          {renderIcons(
+            FILLED_ICONS,
+            formatMessage(
+              { defaultMessage: '面性图标（{count}）' },
+              { count: FILLED_ICONS.length },
+            ),
+          )}
+        </div>
+      );
     }
     return (
       <div>
-        <div>{renderIcons(GENERAL_ICONS, 'icon-outlined-general')}</div>
-        <div>{renderIcons(USER_ICONS, 'icon-outlined-user')}</div>
-        <div>{renderIcons(DATA_ICONS, 'icon-outlined-data')}</div>
-        <div>{renderIcons(DIRECTION_ICONS, 'icon-outlined-direction')}</div>
-        <div>{renderIcons(TIPS_ICONS, 'icon-outlined-tips')}</div>
         <div>
-          {renderIcons(PLATFORM_DEVICE_ICONS, 'icon-outlined-platform-device')}
+          {renderIcons(
+            GENERAL_ICONS,
+            formatMessage(
+              { defaultMessage: '通用类图标（{count}）' },
+              { count: GENERAL_ICONS.length },
+            ),
+          )}
         </div>
-        <div>{renderIcons(EDIT_ICONS, 'icon-outlined-edit')}</div>
-        <div>{renderIcons(MEDIA_ICONS, 'icon-outlined-media')}</div>
+        <div>
+          {renderIcons(
+            USER_ICONS,
+            formatMessage(
+              { defaultMessage: '用户图标（{count}）' },
+              { count: USER_ICONS.length },
+            ),
+          )}
+        </div>
+        <div>
+          {renderIcons(
+            DATA_ICONS,
+            formatMessage(
+              { defaultMessage: '数据、业务图标（{count}）' },
+              { count: DATA_ICONS.length },
+            ),
+          )}
+        </div>
+        <div>
+          {renderIcons(
+            DIRECTION_ICONS,
+            formatMessage(
+              { defaultMessage: '方向指示图标（{count}）' },
+              { count: DIRECTION_ICONS.length },
+            ),
+          )}
+        </div>
+        <div>
+          {renderIcons(
+            TIPS_ICONS,
+            formatMessage(
+              { defaultMessage: '提示建议类图标（{count}）' },
+              { count: TIPS_ICONS.length },
+            ),
+          )}
+        </div>
+        <div>
+          {renderIcons(
+            PLATFORM_DEVICE_ICONS,
+            formatMessage(
+              { defaultMessage: '平台和设备图标（{count}）' },
+              { count: PLATFORM_DEVICE_ICONS.length },
+            ),
+          )}
+        </div>
+        <div>
+          {renderIcons(
+            EDIT_ICONS,
+            formatMessage(
+              { defaultMessage: '编辑类图标（{count}）' },
+              { count: EDIT_ICONS.length },
+            ),
+          )}
+        </div>
+        <div>
+          {renderIcons(
+            MEDIA_ICONS,
+            formatMessage(
+              { defaultMessage: '影音类图标（{count}）' },
+              { count: MEDIA_ICONS.length },
+            ),
+          )}
+        </div>
       </div>
     );
   };
   return (
-    <div>
-      <div style={{ display: 'flex', marginTop: 48, marginBottom: 24 }}>
+    <>
+      <div style={{ display: 'flex', marginTop: '2rem' }}>
         <Radio.Group type="button" value={iconType} onChange={setIconType}>
           <Radio value="outlined">
-            <FormattedMessage id="icon-outlined" defaultMessage="线性图标" />
+            <FormattedMessage defaultMessage="线性图标" />
           </Radio>
           <Radio value="filled">
-            <FormattedMessage id="icon-filled" defaultMessage="面性图标" />
+            <FormattedMessage defaultMessage="面性图标" />
           </Radio>
         </Radio.Group>
       </div>
       {content()}
-    </div>
+    </>
   );
 }

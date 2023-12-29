@@ -244,8 +244,14 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'TimePicker' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'TimePicker' })}</Paragraph>
+      <Title>
+        {formatMessage({ defaultMessage: '时间选择器 TimePicker' })}
+      </Title>
+      <Paragraph>
+        {formatMessage({
+          defaultMessage: '在弹出面板上选择时间，以便捷完成时间输入的控件。',
+        })}
+      </Paragraph>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 

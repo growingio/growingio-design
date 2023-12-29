@@ -466,8 +466,14 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'DatePicker' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'DatePicker' })}</Paragraph>
+      <Title>
+        {formatMessage({ defaultMessage: '日期选择器 DatePicker' })}
+      </Title>
+      <Paragraph>
+        {formatMessage({
+          defaultMessage: '选择日期。支持年、月、周、日类型，支持范围选择等。',
+        })}
+      </Paragraph>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 

@@ -35,50 +35,56 @@ function DocPage({ intl: { formatMessage } }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>
-        <FormattedMessage id="empty-docs-title" />
-      </Title>
+      <Title>{formatMessage({ defaultMessage: '空状态 Empty' })}</Title>
       <Paragraph>
-        <FormattedMessage id="empty-docs-desc" />
+        {formatMessage({
+          defaultMessage: '指当前场景没有对应的数据内容，呈现出的一种状态。',
+        })}
       </Paragraph>
 
-      <Title heading={2}>
-        <FormattedMessage defaultMessage="示例" />
-      </Title>
+      <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
       <Title id="basic" heading={3}>
-        <FormattedMessage id="empty-docs-basic-title" />
+        {formatMessage({ defaultMessage: '基本用法' })}
       </Title>
       <Paragraph>
-        <FormattedMessage id="empty-docs-basic-desc" />
+        {formatMessage({ defaultMessage: 'Empty 空状态组件的基础用法。' })}
       </Paragraph>
       <Canvas of={EmptyStories.Basic} />
 
       <Title id="icon-desc" heading={3}>
-        <FormattedMessage id="empty-docs-icon-desc-title" />
+        {formatMessage({ defaultMessage: '图标和文案' })}
       </Title>
       <Paragraph>
-        <FormattedMessage id="empty-docs-icon-desc-desc" />
+        {formatMessage({
+          defaultMessage:
+            '可以通过 icon 参数传入自定义图标，description 修改显示文案。',
+        })}
       </Paragraph>
       <Canvas of={EmptyStories.IconDesc} />
 
       <Title id="image" heading={3}>
-        <FormattedMessage id="empty-docs-image-title" />
+        {formatMessage({ defaultMessage: '图片' })}
       </Title>
       <Paragraph>
-        <FormattedMessage id="empty-docs-image-desc" />
+        {formatMessage({
+          defaultMessage: '可以通过 imgSrc 参数传入图片 Url。',
+        })}
       </Paragraph>
       <Canvas of={EmptyStories.Image} />
 
       <Title id="sizes" heading={3}>
-        <FormattedMessage id="empty-docs-sizes-title" />
+        {formatMessage({ defaultMessage: '空状态尺寸' })}
       </Title>
       <Paragraph>
-        <FormattedMessage id="empty-docs-sizes-desc" />
+        {formatMessage({
+          defaultMessage:
+            '空状态分为：大型、小型2种尺寸。可在不同场景及不同业务需求选择适合尺寸。可控制按钮不显示及显示几个。',
+        })}
       </Paragraph>
       <Canvas of={EmptyStories.Sizes} />
 
       <Title id="styles" heading={3}>
-        <FormattedMessage id="empty-docs-styles-title" />
+        {formatMessage({ defaultMessage: '空状态样式' })}
       </Title>
       <Canvas of={EmptyStories.Styles} />
 

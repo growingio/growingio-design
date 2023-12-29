@@ -468,8 +468,13 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'Select' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'Select' })}</Paragraph>
+      <Title>{formatMessage({ defaultMessage: '选择器 Select' })}</Title>
+      <Paragraph>
+        {formatMessage({
+          defaultMessage:
+            '当用户需要从一组同类数据中选择一个或多个时，可以使用下拉选择器，点击后选择对应项。',
+        })}
+      </Paragraph>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 
