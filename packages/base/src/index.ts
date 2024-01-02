@@ -97,3 +97,6 @@ export type {
 
 export { default as Cascader } from './cascader';
 export type { CascaderProps } from './cascader';
+
+export { default as Badge } from '@arco-design/web-react/es/Badge';
+export type { BadgeProps } from '@arco-design/web-react/es/Badge';

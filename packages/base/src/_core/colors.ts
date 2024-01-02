@@ -1,11 +1,24 @@
 export default [
-  'gioorange',
+  'gio-orange',
   'primary',
   'blue',
   'green',
   'orange',
   'gold',
-  'skyblue',
+  'sky-blue',
+  'purple',
+  'magenta',
+  'red',
+  'lime',
+  'cyan',
+  'gray',
+];
+
+export const arcoColors = [
+  'blue',
+  'green',
+  'orange',
+  'gold',
   'purple',
   'magenta',
   'red',
