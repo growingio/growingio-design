@@ -87,12 +87,12 @@ export function PropsTable({
   const commonData = [
     {
       name: 'className',
-      description: formatMessage({ defaultMessage: '节点类名' }),
+      description: formatMessage({ defaultMessage: '节点类名。' }),
       type: 'string | string[]',
     },
     {
       name: 'style',
-      description: formatMessage({ defaultMessage: '节点样式' }),
+      description: formatMessage({ defaultMessage: '节点样式。' }),
       type: 'CSSProperties',
     },
   ];
