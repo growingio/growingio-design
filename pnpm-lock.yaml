@@ -87,14 +87,14 @@ importers:
   apps/website:
     dependencies:
       '@arco-design/web-react':
-        specifier: 2.57.2
-        version: 2.57.2(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.58.0
+        version: 2.58.0(react-dom@18.2.0)(react@18.2.0)
       '@arco-iconbox/react-growingio':
         specifier: 0.0.4
         version: 0.0.4(react@18.2.0)
       '@arco-themes/react-growingio':
-        specifier: 0.1.0
-        version: 0.1.0(@arco-design/web-react@2.57.2)
+        specifier: 0.2.0
+        version: 0.2.0(@arco-design/web-react@2.58.0)
       '@storybook/addon-docs':
         specifier: 7.6.5
         version: 7.6.5(react-dom@18.2.0)(react@18.2.0)
@@ -160,11 +160,11 @@ importers:
   packages/base:
     dependencies:
       '@arco-design/web-react':
-        specifier: 2.57.2
-        version: 2.57.2(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.58.0
+        version: 2.58.0(react-dom@18.2.0)(react@18.2.0)
       '@arco-themes/react-growingio':
-        specifier: 0.1.0
-        version: 0.1.0(@arco-design/web-react@2.57.2)
+        specifier: 0.2.0
+        version: 0.2.0(@arco-design/web-react@2.58.0)
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -219,8 +219,8 @@ packages:
       color: 3.2.1
     dev: false
 
-  /@arco-design/web-react@2.57.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qsJLjeSBq7KgauoLu6FOzytGgZc6PxHN7X3EWxfvpO6HBzcn4D7kaNP8h8kk74WKDSNrC9wfdp5nyJejZZdbkQ==}
+  /@arco-design/web-react@2.58.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-kfROK/3uKsonaQ0tVmzbY4/C0l5w3MerOBAXJqtUgV/I9ewrcG6TZqAQs3dXSUS0pQc+kuqnOBFBv8pT9lIHIw==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -251,12 +251,12 @@ packages:
     dependencies:
       react: 18.2.0
 
-  /@arco-themes/react-growingio@0.1.0(@arco-design/web-react@2.57.2):
-    resolution: {integrity: sha512-X4SXGldzVLBGefMKMUkPND38mie4H+qLroAZfUD2mhSV8+MyGU96XHIpdZ1FdE12Di2YrEgyH/hSxxDy7YEJMw==}
+  /@arco-themes/react-growingio@0.2.0(@arco-design/web-react@2.58.0):
+    resolution: {integrity: sha512-7ocSWf62Hln6TU0c1JodWFCW4klkb56wXYS4Hk8wKKqEpuiwYGs9Sie3juSCSyC7HJkxwd3a8QNOW3XCPq2Jnw==}
     peerDependencies:
-      '@arco-design/web-react': ^2.57.2
+      '@arco-design/web-react': ^2.58.0
     dependencies:
-      '@arco-design/web-react': 2.57.2(react-dom@18.2.0)(react@18.2.0)
+      '@arco-design/web-react': 2.58.0(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /@aw-web-design/x-default-browser@1.4.126:
