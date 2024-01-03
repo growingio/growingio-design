@@ -138,8 +138,7 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'Calendar' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'Calendar' })}</Paragraph>
+      <Title>{formatMessage({ defaultMessage: '日历 Calendar' })}</Title>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 

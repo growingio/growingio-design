@@ -103,3 +103,12 @@ export type { BadgeProps } from '@arco-design/web-react/es/Badge';
 
 export { default as Calendar } from '@arco-design/web-react/es/Calendar';
 export type { CalendarProps } from '@arco-design/web-react/es/Calendar';
+
+export { default as Card } from '@arco-design/web-react/es/Card';
+export type { CardProps } from '@arco-design/web-react/es/Card';
+
+export { default as Skeleton } from '@arco-design/web-react/es/Skeleton';
+export type { SkeletonProps } from '@arco-design/web-react/es/Skeleton';
+
+export { default as Tabs } from '@arco-design/web-react/es/Tabs';
+export type { TabsProps } from '@arco-design/web-react/es/Tabs';

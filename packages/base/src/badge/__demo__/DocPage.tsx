@@ -68,8 +68,13 @@ function DocPage({ intl }: { intl: IntlShape }) {
 
   return (
     <Unstyled>
-      <Title>{formatMessage({ defaultMessage: 'Badge' })}</Title>
-      <Paragraph>{formatMessage({ defaultMessage: 'Badge' })}</Paragraph>
+      <Title>{formatMessage({ defaultMessage: '徽标数 Badge' })}</Title>
+      <Paragraph>
+        {formatMessage({
+          defaultMessage:
+            '一般出现在图标或文字的右上角。提供及时、重要的信息提示。',
+        })}
+      </Paragraph>
 
       <Title heading={2}>{formatMessage({ defaultMessage: '示例' })}</Title>
 
