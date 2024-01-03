@@ -100,3 +100,6 @@ export type { CascaderProps } from './cascader';
 
 export { default as Badge } from '@arco-design/web-react/es/Badge';
 export type { BadgeProps } from '@arco-design/web-react/es/Badge';
+
+export { default as Calendar } from '@arco-design/web-react/es/Calendar';
+export type { CalendarProps } from '@arco-design/web-react/es/Calendar';
