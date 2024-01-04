@@ -112,3 +112,6 @@ export type { SkeletonProps } from '@arco-design/web-react/es/Skeleton';
 
 export { default as Tabs } from '@arco-design/web-react/es/Tabs';
 export type { TabsProps } from '@arco-design/web-react/es/Tabs';
+
+export { default as Image } from '@arco-design/web-react/es/Image';
+export type { ImageProps } from '@arco-design/web-react/es/Image';
