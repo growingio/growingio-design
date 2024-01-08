@@ -101,6 +101,9 @@ importers:
       '@storybook/addon-toolbars':
         specifier: 7.6.5
         version: 7.6.5
+      '@storybook/addon-viewport':
+        specifier: ^7.6.7
+        version: 7.6.7
       '@storybook/blocks':
         specifier: 7.6.5
         version: 7.6.5(react-dom@18.2.0)(react@18.2.0)
@@ -122,9 +125,18 @@ importers:
       babel-plugin-formatjs:
         specifier: ^10.5.10
         version: 10.5.10(ts-jest@29.1.1)
+      clsx:
+        specifier: ^2.0.0
+        version: 2.0.0
+      dayjs:
+        specifier: ^1.11.10
+        version: 1.11.10
       growingio-design:
         specifier: workspace:*
         version: link:../../packages/base
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -140,13 +152,6 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
-    devDependencies:
-      dayjs:
-        specifier: ^1.11.10
-        version: 1.11.10
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
 
   libs/nx-react:
     dependencies:
@@ -4697,6 +4702,12 @@ packages:
 
   /@storybook/addon-toolbars@7.6.5:
     resolution: {integrity: sha512-/zqWbVNE/SHc8I5Prnd2Q8U57RGEIYvHfeXjfkuLcE2Quc4Iss4x/9eU7SKu4jm+IOO2s0wlN6HcqI3XEf2XxA==}
+    dev: false
+
+  /@storybook/addon-viewport@7.6.7:
+    resolution: {integrity: sha512-Q/BKjJaKzl4RWxH45K2iIXwkicj4ReVAUIpIyd7dPBb/Bx+hEDYZxR5dDg82AMkZdA71x5ttMnuDSuVpmWAE6g==}
+    dependencies:
+      memoizerific: 1.11.3
     dev: false
 
   /@storybook/blocks@7.6.5(react-dom@18.2.0)(react@18.2.0):

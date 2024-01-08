@@ -22,6 +22,8 @@
     }
   },
   "include": [
+    "apps/*/compnents/**/*.ts",
+    "apps/*/compnents/**/*.tsx",
     "libs/*/src/**/*.ts",
     "packages/*/src/**/*.ts",
     "packages/*/src/**/*.tsx"
