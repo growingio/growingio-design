@@ -103,6 +103,7 @@ export function PropsTable({
       columns={columns}
       data={includeCommonProps ? [...data, ...commonData] : data}
       pagination={false}
+      rowKey="name"
     />
   );
 }

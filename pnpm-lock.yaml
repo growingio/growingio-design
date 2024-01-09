@@ -90,8 +90,8 @@ importers:
         specifier: 2.58.0
         version: 2.58.0(react-dom@18.2.0)(react@18.2.0)
       '@arco-iconbox/react-growingio':
-        specifier: 0.0.4
-        version: 0.0.4(react@18.2.0)
+        specifier: 0.2.0
+        version: 0.2.0
       '@arco-themes/react-growingio':
         specifier: 0.2.0
         version: 0.2.0(@arco-design/web-react@2.58.0)
@@ -175,8 +175,8 @@ importers:
         version: 2.0.0
     devDependencies:
       '@arco-iconbox/react-growingio':
-        specifier: 0.0.4
-        version: 0.0.4(react@18.2.0)
+        specifier: 0.2.0
+        version: 0.2.0
       '@storybook/blocks':
         specifier: 7.6.6
         version: 7.6.6(react-dom@18.2.0)(react@18.2.0)
@@ -249,12 +249,8 @@ packages:
       - '@types/react'
     dev: false
 
-  /@arco-iconbox/react-growingio@0.0.4(react@18.2.0):
-    resolution: {integrity: sha512-BXABjkxninToLNR9nhPGiqWB+E/axFdD9FXkJ9Iuu27k+lMpHGBxiqsT/FtxjHoughGBG+917QLk41q7tSDo5Q==}
-    peerDependencies:
-      react: '>=16.9.0'
-    dependencies:
-      react: 18.2.0
+  /@arco-iconbox/react-growingio@0.2.0:
+    resolution: {integrity: sha512-9dgjSwz3VDPPZLnxjE70PVcrBK1BJTimu+/gs13Muynqt7Zl9F+mqQAhCO9Ku62fP/+794twCUwRocWl6w32hw==}
 
   /@arco-themes/react-growingio@0.2.0(@arco-design/web-react@2.58.0):
     resolution: {integrity: sha512-7ocSWf62Hln6TU0c1JodWFCW4klkb56wXYS4Hk8wKKqEpuiwYGs9Sie3juSCSyC7HJkxwd3a8QNOW3XCPq2Jnw==}
