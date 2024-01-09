@@ -3,6 +3,7 @@
 @import './_core/reset.css';
 @import './_core/picker.css';
 @import './alert/style/index.css';
+@import './back-top/style/index.css';
 @import './button/style/index.css';
 @import './dropdown/style/index.css';
 @import './empty/style/index.css';

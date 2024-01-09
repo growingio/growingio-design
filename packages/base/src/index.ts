@@ -115,3 +115,6 @@ export type { TabsProps } from '@arco-design/web-react/es/Tabs';
 
 export { default as Image } from '@arco-design/web-react/es/Image';
 export type { ImageProps } from '@arco-design/web-react/es/Image';
+
+export { default as BackTop } from '@arco-design/web-react/es/BackTop';
+export type { BackTopProps } from '@arco-design/web-react/es/BackTop';
