@@ -118,3 +118,6 @@ export type { ImageProps } from '@arco-design/web-react/es/Image';
 
 export { default as BackTop } from '@arco-design/web-react/es/BackTop';
 export type { BackTopProps } from '@arco-design/web-react/es/BackTop';
+
+export { default as Steps } from '@arco-design/web-react/es/Steps';
+export type { StepsProps } from '@arco-design/web-react/es/Steps';
