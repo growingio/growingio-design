@@ -121,3 +121,9 @@ export type { BackTopProps } from '@arco-design/web-react/es/BackTop';
 
 export { default as Steps } from '@arco-design/web-react/es/Steps';
 export type { StepsProps } from '@arco-design/web-react/es/Steps';
+
+export { default as Spin } from '@arco-design/web-react/es/Spin';
+export type { SpinProps } from '@arco-design/web-react/es/Spin';
+
+export { default as Modal } from './modal';
+export type { ModalProps, ModalHookReturnType } from './modal';
