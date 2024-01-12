@@ -127,3 +127,9 @@ export type { SpinProps } from '@arco-design/web-react/es/Spin';
 
 export { default as Modal } from './modal';
 export type { ModalProps, ModalHookReturnType } from './modal';
+
+export { default as Tree } from '@arco-design/web-react/es/Tree';
+export type { TreeProps } from '@arco-design/web-react/es/Tree';
+
+export { default as Checkbox } from '@arco-design/web-react/es/Checkbox';
+export type { CheckboxProps } from '@arco-design/web-react/es/Checkbox';
