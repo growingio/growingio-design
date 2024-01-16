@@ -59,13 +59,14 @@ export type { DropdownProps } from '@arco-design/web-react/es/Dropdown';
 export { default as InputNumber } from '@arco-design/web-react/es/InputNumber';
 export type { InputNumberProps } from '@arco-design/web-react/es/InputNumber';
 
-export { default as Table } from '@arco-design/web-react/es/Table';
+export { default as Table } from './table';
 export type {
   TableProps,
-  RowSelectionProps as TableRowSelectionProps,
-  ColumnProps as TableColumnProps,
-  ExpandProps as TableExpandProps,
-} from '@arco-design/web-react/es/Table';
+  TableRowSelectionProps,
+  TableColumnProps,
+  TableExpandProps,
+  TableInstance,
+} from './table';
 
 export { default as Message } from '@arco-design/web-react/es/Message';
 export type { MessageProps } from '@arco-design/web-react/es/Message';
