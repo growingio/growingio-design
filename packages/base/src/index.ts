@@ -133,3 +133,22 @@ export type { TreeProps } from '@arco-design/web-react/es/Tree';
 
 export { default as Checkbox } from '@arco-design/web-react/es/Checkbox';
 export type { CheckboxProps } from '@arco-design/web-react/es/Checkbox';
+
+export { default as Form } from '@arco-design/web-react/es/Form';
+export type {
+  FormProps,
+  FormItemProps,
+  FormInstance,
+} from '@arco-design/web-react/es/Form';
+
+export { default as Rate } from '@arco-design/web-react/es/Rate';
+export type { RateProps } from '@arco-design/web-react/es/Rate';
+
+export { default as Slider } from '@arco-design/web-react/es/Slider';
+export type { SliderProps } from '@arco-design/web-react/es/Slider';
+
+export { default as TreeSelect } from '@arco-design/web-react/es/TreeSelect';
+export type { TreeSelectProps } from '@arco-design/web-react/es/TreeSelect';
+
+export { default as Upload } from '@arco-design/web-react/es/Upload';
+export type { UploadProps } from '@arco-design/web-react/es/Upload';
