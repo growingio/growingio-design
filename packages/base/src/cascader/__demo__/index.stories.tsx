@@ -11,7 +11,7 @@ const meta: Meta<typeof Cascader> = {
 export default meta;
 type Story = StoryObj<typeof Cascader>;
 
-const options = [
+export const options = [
   {
     value: 'beijing',
     label: 'Beijing',

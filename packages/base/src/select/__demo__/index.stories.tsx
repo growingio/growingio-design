@@ -30,7 +30,7 @@ const meta: Meta<typeof Select> = {
 export default meta;
 type Story = StoryObj<typeof Select>;
 
-const options = [
+export const options = [
   'Beijing',
   'Shanghai',
   'Guangzhou',
