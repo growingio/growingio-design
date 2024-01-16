@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 22px;
 }
 
 /* size - large */
@@ -40,4 +41,5 @@
 
 .arco-empty-small .arco-empty-description {
   font-size: 12px;
+  line-height: 20px;
 }

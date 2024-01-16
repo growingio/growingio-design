@@ -23,7 +23,6 @@ const ModalFunction = (props: ModalProps, ref: React.Ref<HTMLDivElement>) => {
   const { className, fullscreen, alignCenter, ...restProps } = props;
   const prefixCls = 'arco-modal';
   const cls = clsx({ [`${prefixCls}-fullscreen`]: !!fullscreen }, className);
-  console.log('[+] align center:', !fullscreen && alignCenter);
   return (
     <div ref={ref}>
       <ArcoModal
