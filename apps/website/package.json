@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@arco-design/web-react": "2.58.0",
-    "@arco-iconbox/react-growingio": "0.2.0",
+    "@arco-iconbox/react-growingio": "0.3.0",
     "@arco-themes/react-growingio": "0.2.0",
     "@storybook/addon-docs": "7.6.5",
     "@storybook/addon-toolbars": "7.6.5",

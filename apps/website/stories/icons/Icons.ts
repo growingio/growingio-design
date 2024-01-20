@@ -361,18 +361,28 @@ const FILLED_ICONS = [
 ];
 
 const COLOR_ICONS = [
-  'SuretyColor',
-  'CalibrationColor',
   'DatabasesColor',
   'EnterpriseColor',
   'EnterpriseSetupColor',
-  'SettingColor',
+  'IntelligentColor',
   'AnalyticsColor',
+  'SceneColor',
   'ColonyColor',
-  'DataIntegrationColor',
+  'SignageColor',
   'TrackColor',
-  'MetadataColor',
+  'OperationsColor',
   'ProductsColor',
+  'MetadataColor',
+  'CalibrationColor',
+  'SettingColor',
+  'DataIntegrationColor',
+  'SuretyColor',
+  'LaboratoryColor',
+  'ManeuverColor',
+  'IndicatorManagementColor',
+  'LabelManagementColor',
+  'BuriedPointColor',
+  'CustomerWatchdogColor',
 ];
 
 const EMOJIS = [

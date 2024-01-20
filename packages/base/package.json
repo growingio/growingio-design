@@ -22,7 +22,7 @@
     "react-draggable": "^4.4.6"
   },
   "devDependencies": {
-    "@arco-iconbox/react-growingio": "0.2.0",
+    "@arco-iconbox/react-growingio": "0.3.0",
     "@storybook/blocks": "7.6.6",
     "@storybook/react": "7.6.6",
     "dayjs": "^1.11.10",
