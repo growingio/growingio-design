@@ -167,3 +167,5 @@ export {
   ConfigConsumer,
 } from '@arco-design/web-react/es/ConfigProvider';
 export type { ConfigProviderProps } from '@arco-design/web-react/es/ConfigProvider';
+
+export { default as Tour, type TourProps, type TourStepProps } from './tour';
