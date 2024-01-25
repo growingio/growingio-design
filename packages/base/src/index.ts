@@ -160,3 +160,10 @@ export { default as useVerificationCode } from '@arco-design/web-react/es/_hooks
 
 export { default as Watermark } from './watermark';
 export type { WatermarkProps } from './watermark';
+
+export {
+  default as ConfigProvider,
+  ConfigContext,
+  ConfigConsumer,
+} from '@arco-design/web-react/es/ConfigProvider';
+export type { ConfigProviderProps } from '@arco-design/web-react/es/ConfigProvider';
