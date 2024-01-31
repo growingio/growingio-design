@@ -5,7 +5,7 @@ import React from 'react';
 import type { ButtonProps } from '../button';
 import Button from '../button';
 // import { useLocale } from '../locale';
-import defaultLocale from '../locale/default';
+// import defaultLocale from '../locale/default';
 import type { TourStepProps } from './interface';
 // import useClosable from '../_util/hooks/useClosable';
 

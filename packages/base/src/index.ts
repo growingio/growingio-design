@@ -1,5 +1,3 @@
-import './index.css';
-
 export { default as Alert } from '@arco-design/web-react/es/Alert';
 export type { AlertProps } from '@arco-design/web-react/es/Alert';
 

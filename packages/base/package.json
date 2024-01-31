@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "source": "src/index.ts",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "module": "dist/index.min.js",
+  "main": "dist/index.min.js",
   "scripts": {
-    "stylelint": "stylelint \"components/**/*.css\""
+    "bundle:css": "esbuild src/index.css --bundle --minify --outfile=dist/index.min.css",
+    "bundle:js": "esbuild src/index.ts --bundle --minify --outfile=dist/index.min.js",
+    "build:es": "arco-scripts build:component:es",
+    "build:cjs": "arco-scripts build:component:cjs",
+    "stylelint": "stylelint 'components/**/*.css'"
   },
   "keywords": [],
   "files": [
@@ -25,6 +28,9 @@
     "@arco-iconbox/react-growingio": "0.3.0",
     "@storybook/blocks": "7.6.6",
     "@storybook/react": "7.6.6",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "arco-scripts": "^1.27.13",
     "dayjs": "^1.11.10",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
@@ -33,6 +39,7 @@
     "react-intl": "^6.5.2",
     "react-resizable": "^3.0.5",
     "react-sticky": "^6.0.3",
+    "typescript": "^5.2.2",
     "website": "workspace:*"
   },
   "peerDependencies": {
