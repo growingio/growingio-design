@@ -77,6 +77,7 @@ function DocPage({ intl: { formatMessage } }: { intl: IntlShape }) {
         {formatMessage({ defaultMessage: '展示错误状态。' })}
       </Paragraph>
       <Canvas of={ResultStories.Error} />
+
       <Title heading={3} id="forbidden">
         {formatMessage({ defaultMessage: '无访问权限' })}
       </Title>
@@ -87,6 +88,18 @@ function DocPage({ intl: { formatMessage } }: { intl: IntlShape }) {
         })}
       </Paragraph>
       <Canvas of={ResultStories.Forbidden} />
+
+      <Title heading={3} id="payment-required">
+        {formatMessage({ defaultMessage: '无权益' })}
+      </Title>
+      <Paragraph>
+        {formatMessage({
+          defaultMessage:
+            '无权益 - 402 Payment Required：适用于用户通过URL打开页面，但没有没有购买该权益无功能可配',
+        })}
+      </Paragraph>
+      <Canvas of={ResultStories.PaymentRequired} />
+
       <Title heading={3} id="no-resource">
         {formatMessage({ defaultMessage: '资源删除' })}
       </Title>
