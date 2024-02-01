@@ -94,6 +94,24 @@ export const Forbidden: Story = {
   },
 };
 
+export const PaymentRequired: Story = {
+  ...Success,
+  args: {
+    status: '402',
+    title: <FormattedMessage defaultMessage="该功能为高级功能" />,
+    subTitle: (
+      <>
+        <span style={{ marginRight: 8 }}>
+          <FormattedMessage defaultMessage="请联系客户成功经理开通" />
+        </span>
+        <Link href="#">
+          <FormattedMessage defaultMessage="了解产品" />
+        </Link>
+      </>
+    ),
+  },
+};
+
 export const NoResource: Story = {
   ...Success,
   args: {

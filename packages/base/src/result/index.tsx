@@ -6,6 +6,7 @@ import {
 import { clsx } from 'clsx';
 import Result200 from './Result200';
 import Result401 from './Result401';
+import Result402 from './Result402';
 import Result403 from './Result403';
 import Result404 from './Result404';
 import Result500 from './Result500';
@@ -18,6 +19,7 @@ export type ResultProps = Omit<ArcoResultProps, 'status'> & {
     | 'no-resource'
     | '200'
     | '401'
+    | '402'
     | '403'
     | '404'
     | '500';
@@ -42,6 +44,9 @@ const ResultFunction = (props: ResultProps, ref: React.Ref<unknown>) => {
       break;
     case '401':
       icon = <Result401 />;
+      break;
+    case '402':
+      icon = <Result402 />;
       break;
     case '403':
       icon = <Result403 />;

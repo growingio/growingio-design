@@ -1,5 +1,6 @@
 .arco-result-200,
 .arco-result-401,
+.arco-result-402,
 .arco-result-403,
 .arco-result-404,
 .arco-result-500,
@@ -14,7 +15,6 @@
     .arco-result-icon-tip {
       svg {
         width: 320px;
-        height: 224px;
       }
     }
   }
