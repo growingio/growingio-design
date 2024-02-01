@@ -3,7 +3,7 @@ const GENERAL_ICONS = [
   'Yuan',
   'Network',
   'Debug',
-  'Calendarclock',
+  'CalendarClock',
   'Module',
   'Corporations',
   'Deeplink',
@@ -258,6 +258,10 @@ const PLATFORM_DEVICE_ICONS = [
 ];
 
 const EDIT_ICONS = [
+  'Permutation',
+  'LineHeader',
+  'ColumnHeader',
+  'Norm',
   'H3',
   'BgColors',
   'H1',
